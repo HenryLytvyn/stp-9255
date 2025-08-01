@@ -1,0 +1,165 @@
+.about .container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.about__title {
+  margin-bottom: 32px;
+}
+
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+
+.about__card {
+  width: 288px;
+  height: 231px;
+  border: 2px solid var(--main-color);
+  padding-top: 5px;
+
+  background-image: image-set(
+    url(../img/about-the-game/heroes-mobile.png) 1x,
+    /* url(../img/about-the-game/heroes-mobile@2x.png) 2x */
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about__card-title {
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about__content-wrapper {
+}
+
+.about__text {
+  line-height: 1.475;
+}
+
+.about__text:first-child {
+  margin-bottom: 8px;
+}
+
+.about__lists-text {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.about__features-list {
+}
+
+.about__features-item {
+  position: relative;
+  padding-left: 48px;
+
+  /* line-height: 1.475; */
+}
+
+.about__features-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.about__features-item::before {
+  position: absolute;
+  left: 0;
+  top: 7px;
+  content: '';
+  width: 32px;
+  height: 32px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about__features-item.about__frame-1::before {
+  background-image: image-set(
+    url(../img/about-the-game/about-list-crown.png) 1x,
+    url(../img/about-the-game/about-list-crown@2x.png) 2x
+  );
+}
+
+.about__features-item.about__frame-2::before {
+  background-image: image-set(
+    url(../img/about-the-game/about-list-swords.png) 1x,
+    url(../img/about-the-game/about-list-swords@2x.png) 2x
+  );
+}
+
+.about__features-item.about__frame-3::before {
+  background-image: image-set(
+    url(../img/about-the-game/about-list-man.png) 1x,
+    url(../img/about-the-game/about-list-man@2x.png) 2x
+  );
+}
+
+@media screen and (min-width: 1200px) {
+  .about .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .about__title {
+    margin-bottom: 60px;
+  }
+
+  .about__wrapper {
+    flex-direction: row;
+  }
+
+  .about__card {
+    width: 554px;
+    height: 445px;
+    padding-top: 10px;
+    background-image: image-set(
+      url(../img/about-the-game/heroes-desktop.png) 1x
+    );
+  }
+
+  .about__card-title {
+    font-size: 32px;
+  }
+
+  .about__content-wrapper {
+    width: 554px;
+  }
+
+  .about__text {
+  }
+
+  .about__lists-text {
+    font-weight: 500;
+  }
+
+  .about__features-list {
+  }
+
+  .about__features-item {
+    padding-left: 64px;
+  }
+
+  .about__features-item:not(:last-child) {
+    margin-bottom: 17px;
+  }
+
+  .about__features-item::before {
+    left: 16px;
+    top: -2px;
+  }
+
+  .about__frame-1 {
+  }
+
+  .about__frame-2 {
+  }
+
+  .about__frame-3 {
+  }
+}
