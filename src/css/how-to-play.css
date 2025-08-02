@@ -1,0 +1,75 @@
+.ht-play {
+  background-image: image-set(
+    url('../img/ht-play_reviews-bg-mobile.png') 1x,
+    url('../img/ht-play_reviews-bg-mobile@2x.png') 2x
+  );
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.ht-play .container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.ht-play__title {
+  padding-bottom: 32px;
+}
+
+.ht-play__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ht-play__item {
+  width: 100%;
+  padding: 16px 8px;
+  border: 1px solid var(--main-color);
+  border-radius: 8px;
+  background: rgba(0, 32, 57, 0.8);
+}
+
+.ht-play__position-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 56px;
+  width: 28px;
+  height: 40px;
+  border: solid 1px var(--main-color);
+  border-radius: 8px;
+}
+
+.ht-play__position {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.ht-play__position-wrapper::after {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 40px;
+  top: -1px;
+  left: 35px;
+  z-index: 1;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ht-play__position-wrapper.ht-play__icon-1::after {
+  background-image: image-set(
+    url(../img/how-to-play/choose-faction-mobile.png) 1x,
+    url(../img/how-to-play/choose-faction-mobile@2x.png) 2x
+  );
+}
+
+.ht-play__subtitle {
+}
+
+.ht-play__description {
+}
