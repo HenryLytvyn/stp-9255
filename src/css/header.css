@@ -1,5 +1,10 @@
 .header {
+  position: fixed;
+  z-index: 10;
   padding: 10px 0;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .header .container {

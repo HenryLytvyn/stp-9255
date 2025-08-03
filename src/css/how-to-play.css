@@ -1,8 +1,4 @@
 .ht-play {
-  background-image: image-set(
-    url('../img/ht-play_reviews-bg-mobile.png') 1x,
-    url('../img/ht-play_reviews-bg-mobile@2x.png') 2x
-  );
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -23,6 +19,12 @@
 }
 
 .ht-play__item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 26px 1fr;
+  column-gap: 56px;
+  row-gap: 16px;
+
   width: 100%;
   padding: 16px 8px;
   border: 1px solid var(--main-color);
@@ -35,11 +37,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 56px;
   width: 28px;
   height: 40px;
   border: solid 1px var(--main-color);
   border-radius: 8px;
+
+  grid-row: 1;
+  grid-column: 1;
 }
 
 .ht-play__position {
@@ -54,22 +58,180 @@
   height: 40px;
   top: -1px;
   left: 35px;
-  z-index: 1;
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.ht-play__position-wrapper.ht-play__icon-1::after {
-  background-image: image-set(
-    url(../img/how-to-play/choose-faction-mobile.png) 1x,
-    url(../img/how-to-play/choose-faction-mobile@2x.png) 2x
-  );
-}
-
 .ht-play__subtitle {
+  font-family: var(--main-font);
+  text-transform: capitalize;
+
+  grid-row: 1;
+  grid-column: 2;
 }
 
 .ht-play__description {
+  line-height: 1.4;
+
+  grid-row: 2;
+  grid-column: 1 / span 2;
+}
+
+@media screen and (max-width: 1199px) {
+  .ht-play {
+    background-image: image-set(
+      url(../img/ht-play_reviews-bg-mobile.png) 1x,
+      url(../img/ht-play_reviews-bg-mobile@2x.png) 2x
+    );
+  }
+
+  .ht-play__icon-1::after {
+    background-image: image-set(
+      url(../img/how-to-play/choose-faction-mobile.png) 1x,
+      url(../img/how-to-play/choose-faction-mobile@2x.png) 2x
+    );
+  }
+
+  .ht-play__icon-2::after {
+    background-image: image-set(
+      url(../img/how-to-play/recruit-heroes-mobile.png) 1x,
+      url(../img/how-to-play/recruit-heroes-mobile@2x.png) 2x
+    );
+  }
+
+  .ht-play__icon-3::after {
+    background-image: image-set(
+      url(../img/how-to-play/build-and-expand-mobile.png) 1x,
+      url(../img/how-to-play/build-and-expand-mobile@2x.png) 2x
+    );
+  }
+
+  .ht-play__icon-4::after {
+    background-image: image-set(
+      url(../img/how-to-play/conquer-territories-mobile.png) 1x,
+      url(../img/how-to-play/conquer-territories-mobile@2x.png) 2x
+    );
+  }
+
+  .ht-play__icon-5::after {
+    background-image: image-set(
+      url(../img/how-to-play/form-alliances-mobile.png) 1x,
+      url(../img/how-to-play/form-alliances-mobile@2x.png) 2x
+    );
+  }
+
+  .ht-play__icon-6::after {
+    background-image: image-set(
+      url(../img/how-to-play/shape-legacy-mobile.png) 1x,
+      url(../img/how-to-play/shape-legacy-mobile@2x.png) 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ht-play {
+    background-image: image-set(
+      url(../img/ht-play_reviews-bg-desktop.png) 1x,
+      url(../img/ht-play_reviews-bg-desktop@2x.png) 2x
+    );
+  }
+
+  .ht-play .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .ht-play__title {
+    margin-bottom: 60px;
+  }
+
+  .ht-play__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 46px;
+  }
+
+  .ht-play__item {
+    flex-basis: calc((100% - 46px) / 2);
+    column-gap: 130px;
+    row-gap: 8px;
+  }
+
+  .ht-play__position-wrapper {
+    width: 36px;
+    height: 80px;
+
+    grid-row: 1 / span 2;
+    grid-column: 1;
+  }
+
+  .ht-play__position-wrapper::after {
+    width: 80px;
+    height: 80px;
+    left: 51px;
+  }
+
+  .ht-play__position {
+    font-size: 24px;
+  }
+
+  .ht-play__subtitle {
+    font-size: 24px;
+    line-height: 1.5;
+
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  .ht-play__description {
+    line-height: 1.5;
+
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .ht-play__icon-1::after {
+    background-image: image-set(
+      url(../img/how-to-play/choose-faction-desktop.png) 1x,
+      url(../img/how-to-play/choose-faction-desktop@2x.png) 2x
+    );
+  }
+
+  .ht-play__icon-2::after {
+    background-image: image-set(
+      url(../img/how-to-play/recruit-heroes-desktop.png) 1x,
+      url(../img/how-to-play/recruit-heroes-desktop@2x.png) 2x
+    );
+  }
+
+  .ht-play__icon-3::after {
+    background-image: image-set(
+      url(../img/how-to-play/build-and-expand-desktop.png) 1x,
+      url(../img/how-to-play/build-and-expand-desktop@2x.png) 2x
+    );
+  }
+
+  .ht-play__icon-4::after {
+    background-image: image-set(
+      url(../img/how-to-play/conquer-territories-desktop.png) 1x,
+      url(../img/how-to-play/conquer-territories-desktop@2x.png) 2x
+    );
+  }
+
+  .ht-play__icon-5::after {
+    background-image: image-set(
+      url(../img/how-to-play/form-alliances-desktop.png) 1x,
+      url(../img/how-to-play/form-alliances-desktop@2x.png) 2x
+    );
+  }
+
+  .ht-play__icon-6::after {
+    background-image: image-set(
+      url(../img/how-to-play/shape-legacy-desktop.png) 1x,
+      url(../img/how-to-play/shape-legacy-desktop@2x.png) 2x
+    );
+  }
 }

@@ -33,6 +33,7 @@ h2 {
 
 h1 {
   font-size: 32px;
+  line-height: 1.28;
 }
 
 h3 {
@@ -59,10 +60,19 @@ h3 {
 @media screen and (min-width: 1200px) {
   h1 {
     font-size: 60px;
+    line-height: 1;
   }
 
   h2 {
     font-size: 40px;
+  }
+
+  h3 {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.4;
+    text-transform: capitalize;
   }
 
   body {
