@@ -1,6 +1,6 @@
 :root {
   --main-color: #feffe8;
-  --bg-color: #043558;
+  /* --bg-color: #043558; */
   --button-bg-color: #15b4b9;
   --hover: #92fef8;
 
@@ -18,7 +18,14 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: var(--main-color);
-  background-color: var(--bg-color);
+  background: linear-gradient(
+    90deg,
+    #093e64 0%,
+    #043558 29.81%,
+    #043558 70.19%,
+    #003053 100%
+  );
+  /* background-color: var(--bg-color); */
 }
 
 h1,
@@ -34,6 +41,10 @@ h2 {
 h1 {
   font-size: 32px;
   line-height: 1.28;
+}
+
+h2 {
+  margin-bottom: 32px;
 }
 
 h3 {
@@ -65,6 +76,7 @@ h3 {
 
   h2 {
     font-size: 40px;
+    margin-bottom: 60px;
   }
 
   h3 {

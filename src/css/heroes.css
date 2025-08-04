@@ -1,0 +1,91 @@
+/* .heroes .container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+} */
+
+.heroes__card {
+  position: relative;
+  border: 2px solid var(--main-color);
+  border-radius: 8px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heroes__card-title {
+  position: absolute;
+  text-transform: uppercase;
+  right: 284px;
+  transform: rotate(-90deg);
+  transform-origin: top right;
+  top: 16px;
+
+  background-color: rgba(0, 32, 57, 0.5);
+}
+
+.heroes__card-text {
+  position: absolute;
+  bottom: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .heroes {
+  }
+
+  .heroes__title {
+  }
+
+  .heroes__card {
+    width: 100%;
+    height: 448px;
+
+    background-image: image-set(
+      url(../img/heroes/general-kairos-mobile.png) 1x,
+      url(../img/heroes/general-kairos-mobile@2x.png) 2x
+    );
+
+    box-shadow: 2px 2px 4px 0 rgba(255, 255, 255, 0.25);
+  }
+
+  .heroes__card-title {
+    padding: 8px;
+  }
+
+  .heroes__card-text {
+    padding: 8px;
+    background-color: rgba(0, 32, 57, 0.5);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* .heroes .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  } */
+
+  .container {
+  }
+
+  .heroes__card {
+    width: 362px;
+    height: 543px;
+
+    background-image: image-set(
+      url(../img/heroes/general-kairos-desktop.png) 1x,
+      url(../img/heroes/general-kairos-desktop@2x.png) 2x
+    );
+    box-shadow: 4px 4px 8px 0 rgba(255, 255, 255, 0.25);
+  }
+
+  .heroes__card-title {
+    letter-spacing: 0.24em;
+    padding: 16px;
+    right: 358px;
+  }
+
+  .heroes__card-text {
+  }
+}

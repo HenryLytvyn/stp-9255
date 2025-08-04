@@ -1,12 +1,3 @@
-.about .container {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.about__title {
-  margin-bottom: 32px;
-}
-
 .about__wrapper {
   display: flex;
   flex-direction: column;
@@ -101,14 +92,10 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .about .container {
+  /* .about .container {
     padding-top: 60px;
     padding-bottom: 60px;
-  }
-
-  .about__title {
-    margin-bottom: 60px;
-  }
+  } */
 
   .about__wrapper {
     flex-direction: row;

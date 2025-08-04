@@ -9,9 +9,6 @@
   padding-top: 100px;
 }
 
-.container {
-}
-
 .hero__title {
   margin-bottom: 24px;
 }
@@ -75,10 +72,8 @@
   }
 
   .hero .container {
-    padding-top: 298px;
-    /* padding-bottom: 140px; */
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 298px 100px;
+    padding-bottom: 0;
   }
 
   .container {
