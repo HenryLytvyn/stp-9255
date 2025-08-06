@@ -27,8 +27,10 @@
 
   .nav__list {
     /* height: 52px; */
+    width: 960px;
     flex-direction: row;
     justify-content: space-between;
+    gap: 0;
   }
 
   /* .nav__item {
@@ -36,5 +38,7 @@
   } */
 
   .nav__item-link {
+    padding-left: 6px;
+    padding-right: 6px;
   }
 }
