@@ -7,6 +7,7 @@
 .join__img {
   margin-bottom: 24px;
   /* border: 2px solid var(--main-color); */
+  box-shadow: 2px 2px 4px 0 rgba(255, 255, 255, 0.25);
 }
 
 .join__label {
@@ -51,6 +52,7 @@
 
   .join__img {
     margin-bottom: 0;
+    box-shadow: 4px 4px 8px 0 rgba(255, 255, 255, 0.25);
   }
 
   .join__content-wrapper {
