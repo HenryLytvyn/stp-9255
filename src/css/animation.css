@@ -1,0 +1,14 @@
+.title-frame-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.title-frame-path.animate {
+  animation: draw 1s forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

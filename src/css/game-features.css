@@ -1,82 +1,70 @@
+.features {
+}
+
+.container {
+}
+
+.features__title {
+}
+
+.features__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.features__cards-deck {
+}
+
 .features__card {
+  position: relative;
+  width: 554px;
+}
+
+.features__card-frame-wrapper {
+}
+
+.features__card-text-wrapper {
+  position: absolute;
+  top: 40px;
+  left: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
-  border: solid 1px var(--main-color);
+  width: 506px;
+  height: 785px;
+  pointer-events: none;
 }
 
 .features__card-title {
+  font-weight: 700;
+  font-size: 32px;
   text-transform: uppercase;
   text-align: center;
-  width: 100%;
-  border: solid 1px var(--main-color);
+
+  border: 1px solid #feffe8;
   border-radius: 8px;
+  padding: 16px;
+  width: 506px;
+  height: 73px;
 
   box-shadow: 2px 2px 4px 0 rgba(255, 255, 255, 0.25);
-  background-color: rgba(0, 32, 57, 0.8);
+  background: rgba(0, 32, 57, 0.8);
 }
 
 .features__card-text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   text-align: center;
-  width: 100%;
-  border: solid 1px var(--main-color);
+
+  border: 1px solid #feffe8;
   border-radius: 8px;
+  padding: 16px 8px;
+  width: 506px;
+  height: 104px;
 
   box-shadow: 2px 2px 4px 0 rgba(255, 255, 255, 0.25);
-  background-color: rgba(0, 32, 57, 0.8);
-}
-
-@media screen and (max-width: 1199px) {
-  .features__card {
-    height: 450px;
-    padding: 20px 12px;
-    box-shadow: 2px 0 4px 0 rgba(255, 255, 255, 0.5);
-
-    background-image: image-set(
-      url(../img/game-features/strategic-combat-mobile.png) 1x,
-      url(../img/game-features/strategic-combat-mobile@2x.png) 2x
-    );
-  }
-
-  .features__card-title {
-    line-height: 1.25;
-    font-weight: 700;
-
-    padding: 8px;
-  }
-
-  .features__card-text {
-    line-height: 1.47;
-    font-size: 20px;
-    padding: 8px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .features__card {
-    width: 554px;
-    height: 866px;
-    padding: 40px 24px;
-    /* stroke-width: 5px;
-    stroke: #feffe8; */
-    box-shadow: 4px 2px 8px 0 rgba(255, 255, 255, 0.5);
-
-    background-image: image-set(
-      url(../img/game-features/strategic-combat-desktop.png) 1x,
-      url(../img/game-features/strategic-combat-desktop@2x.png) 2x
-    );
-  }
-
-  .features__card-title {
-    line-height: 1.21;
-    padding: 16px;
-  }
-
-  .features__card-text {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.45;
-    padding: 16px 8px;
-  }
+  background: rgba(0, 32, 57, 0.8);
 }

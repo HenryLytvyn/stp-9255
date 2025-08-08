@@ -1,12 +1,22 @@
 <section class="features" id="features">
   <div class="container">
     <h2 class="features__title">Game Features</h2>
-    <!-- Card -->
-    <div class="features__card">
-      <h3 class="features__card-title">Deep Strategic Combat</h3>
-      <p class="features__card-text">
-        Tactical battles that challenge your mind and military precision
-      </p>
+    <load src="/partials/title-frame.html" />
+    <div class="features__wrapper">
+      <div class="features__cards-deck"></div>
+
+      <!-- Card -->
+      <div class="features__card">
+        <div class="features__card-frame-wrapper">
+          <load src="/partials/card-frame-animation.html" />
+        </div>
+        <div class="features__card-text-wrapper">
+          <h3 class="features__card-title">Deep Strategic Combat</h3>
+          <p class="features__card-text">
+            Tactical battles that challenge your mind and military precision
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
