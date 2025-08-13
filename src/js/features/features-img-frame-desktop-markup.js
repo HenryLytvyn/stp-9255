@@ -1,4 +1,5 @@
 const desktopFrame = `<svg
+  xmlns="http://www.w3.org/2000/svg"
   class="card-frame-animation"
   data-id="card-frame-animation"
   width="554"
@@ -7,13 +8,14 @@ const desktopFrame = `<svg
   style="position: relative"
 >
   <defs>
-    <clipPath id="insideClip">
+    <clipPath id="clip-\${id}">
       <polygon
-        id="clipPoly"
+        id="clip-poly-\${id}"
         points="0,0 66.48,0 83.1,0 83.1,0 99.72,0 537.38,0 554,0 554,28.578 554,381.04 554,398.36 554,582.318 554,599.638 554,866 27.7,866 0,866 0,866 0,837.122"
       >
         <animate
-          id="clipAnim"
+          data-anim="clip"
+          id="clip-anim-\${id}"
           attributeName="points"
           dur="2s"
           repeatCount="1"
@@ -31,25 +33,28 @@ const desktopFrame = `<svg
     </clipPath>
   </defs>
 
+  <!-- ИЗОБРАЖЕНИЕ -->
   <image
     href="\${cardSrc}"
     width="554"
     height="866"
-    clip-path="url(#insideClip)"
+    clip-path="url(#clip-\${id})"
   />
 
+  <!-- РАМКА (без clip-path), с собственным id -->
   <polygon
+    id="border-\${id}"
     fill="none"
     stroke="#feffe8"
     stroke-width="2"
     vector-effect="non-scaling-stroke"
     stroke-linejoin="round"
     stroke-linecap="round"
-    clip-path="url(#insideClip)"
     points="0,0 66.48,0 83.1,0 83.1,0 99.72,0 537.38,0 554,0 554,28.578 554,381.04 554,398.36 554,582.318 554,599.638 554,866 27.7,866 0,866 0,866 0,837.122"
   >
     <animate
-      id="borderAnim"
+      data-anim="border"
+      id="border-anim-\${id}"
       attributeName="points"
       dur="2s"
       repeatCount="1"
@@ -64,7 +69,5 @@ const desktopFrame = `<svg
       "
     />
   </polygon>
-</svg>
-`;
-
+</svg>`;
 export default desktopFrame;

@@ -9,9 +9,9 @@ import campaign_map_desktop from '/img/game-features/campaign-map-desktop.png';
 import campaign_map_desktop_2x from '/img/game-features/campaign-map-desktop@2x.png';
 
 import hero_system_mobile from '/img/game-features/hero-system-mobile.png';
-import hero_system_mobile_2x from '/img/game-features/hero-system-mobile.png';
+import hero_system_mobile_2x from '/img/game-features/hero-system-mobile@2x.png';
 import hero_system_desktop from '/img/game-features/hero-system-desktop.png';
-import hero_system_desktop_2x from '/img/game-features/hero-system-desktop.png';
+import hero_system_desktop_2x from '/img/game-features/hero-system-desktop@2x.png';
 
 import interactive_storytelling_mobile from '/img/game-features/interactive-storytelling-mobile.png';
 import interactive_storytelling_mobile_2x from '/img/game-features/interactive-storytelling-mobile@2x.png';
@@ -37,30 +37,44 @@ import isMobile from '../functions/isMobile';
 
 const cardsArr = [
   {
-    id: 'strategic-combat',
-    title: 'Deep Strategic Combat',
-    description:
-      'Tactical battles that challenge your mind and military precision',
+    id: 'pvp-pve-modes',
+    title: 'PvP & PvE Modes',
+    description: 'Compete globally or conquer through immersive solo campaigns',
     src: getImage({
-      mobile1x: strategic_combat_mobile,
-      mobile2x: strategic_combat_mobile_2x,
-      desktop1x: strategic_combat_desktop,
-      desktop2x: strategic_combat_desktop_2x,
+      mobile1x: pvp_and_pve_mobile,
+      mobile2x: pvp_and_pve_mobile_2x,
+      desktop1x: pvp_and_pve_desktop,
+      desktop2x: pvp_and_pve_desktop_2x,
     }),
-    alt: 'angry fighters',
+    alt: 'game heroes',
   },
 
   {
-    id: 'campaign-map',
-    title: 'Massive Campaign Map',
-    description: 'Explore kingdoms, mountains, deserts, and lost temples',
+    id: 'stunning-visuals',
+    title: 'Stunning Visuals',
+    description:
+      'Breathtaking animations, hand-drawn portraits, and dynamic environments',
     src: getImage({
-      mobile1x: campaign_map_mobile,
-      mobile2x: campaign_map_mobile_2x,
-      desktop1x: campaign_map_desktop,
-      desktop2x: campaign_map_desktop_2x,
+      mobile1x: stunning_visuals_mobile,
+      mobile2x: stunning_visuals_mobile_2x,
+      desktop1x: stunning_visuals_desktop,
+      desktop2x: stunning_visuals_desktop_2x,
     }),
-    alt: 'games map',
+    alt: 'game heroes and the dragon',
+  },
+
+  {
+    id: 'dynasty-management',
+    title: 'Dynasty Management',
+    description:
+      'Manage resources, diplomacy, armies, and political stability.',
+    src: getImage({
+      mobile1x: dynasty_management_mobile,
+      mobile2x: dynasty_management_mobile_2x,
+      desktop1x: dynasty_management_desktop,
+      desktop2x: dynasty_management_desktop_2x,
+    }),
+    alt: 'game heroes',
   },
 
   {
@@ -91,44 +105,30 @@ const cardsArr = [
   },
 
   {
-    id: 'dynasty-management',
-    title: 'Dynasty Management',
-    description:
-      'Manage resources, diplomacy, armies, and political stability.',
+    id: 'campaign-map',
+    title: 'Massive Campaign Map',
+    description: 'Explore kingdoms, mountains, deserts, and lost temples',
     src: getImage({
-      mobile1x: dynasty_management_mobile,
-      mobile2x: dynasty_management_mobile_2x,
-      desktop1x: dynasty_management_desktop,
-      desktop2x: dynasty_management_desktop_2x,
+      mobile1x: campaign_map_mobile,
+      mobile2x: campaign_map_mobile_2x,
+      desktop1x: campaign_map_desktop,
+      desktop2x: campaign_map_desktop_2x,
     }),
-    alt: 'game heroes',
+    alt: 'games map',
   },
 
   {
-    id: 'stunning-visuals',
-    title: 'Stunning Visuals',
+    id: 'strategic-combat',
+    title: 'Deep Strategic Combat',
     description:
-      'Breathtaking animations, hand-drawn portraits, and dynamic environments',
+      'Tactical battles that challenge your mind and military precision',
     src: getImage({
-      mobile1x: stunning_visuals_mobile,
-      mobile2x: stunning_visuals_mobile_2x,
-      desktop1x: stunning_visuals_desktop,
-      desktop2x: stunning_visuals_desktop_2x,
+      mobile1x: strategic_combat_mobile,
+      mobile2x: strategic_combat_mobile_2x,
+      desktop1x: strategic_combat_desktop,
+      desktop2x: strategic_combat_desktop_2x,
     }),
-    alt: 'game heroes and the dragon',
-  },
-
-  {
-    id: 'pvp-pve-modes',
-    title: 'PvP & PvE Modes',
-    description: 'Compete globally or conquer through immersive solo campaigns',
-    src: getImage({
-      mobile1x: pvp_and_pve_mobile,
-      mobile2x: pvp_and_pve_mobile_2x,
-      desktop1x: pvp_and_pve_desktop,
-      desktop2x: pvp_and_pve_desktop_2x,
-    }),
-    alt: 'game heroes',
+    alt: 'angry fighters',
   },
 ];
 
