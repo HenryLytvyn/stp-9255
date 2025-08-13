@@ -35,6 +35,7 @@ const desktopFrame = `<svg
 
   <!-- ИЗОБРАЖЕНИЕ -->
   <image
+    class="features__card-image"
     href="\${cardSrc}"
     width="554"
     height="866"
