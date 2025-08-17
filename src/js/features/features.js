@@ -1,81 +1,63 @@
 import isMobile from '../functions/isMobile';
 import createDeckMarkup from './features-deck-markup';
 import createCardMarkup from './features-card-markup';
-import deckCards from './features-images-array';
+import cards from './features-images-array';
 
-const cardDeck = document.querySelector('[data-id="features__cards-deck"]');
+const cardDeckContainer = document.querySelector(
+  '[data-id="features__cards-deck"]'
+);
 const openCardsContainer = document.querySelector(
   '[data-id="features__open-cards"]'
 );
+
+let deckCards = [...cards];
+let isAnimating = false;
 
 if (!isMobile()) {
   const openCards = [];
   openCards.push(deckCards[deckCards.length - 1]);
   deckCards.pop();
 
-  // desktopFrame.replace('${cardSrc}', openCards[0].src);
-
-  // openCardsContainer.insertAdjacentHTML(
-  //   'beforeend',
-  //   createCardMarkup(openCards)
-  // );
-
   openCardsContainer.innerHTML = `${createCardMarkup(openCards)}`;
-
-  const svgs = document.querySelectorAll('[data-id="card-frame-animation"]');
-
-  //!======================
-
-  // const svg = document.querySelector('[data-id="card-frame-animation"]');
-  // const clipAnim = svg.querySelector('[data-anim="clip"]');
-  // const borderAnim = svg.querySelector('[data-anim="border"]');
-
-  // setTimeout(() => {
-  //   if (clipAnim) clipAnim.beginElement();
-  //   if (borderAnim) borderAnim.beginElement();
-  // }, 5000);
-
-  // svgs.forEach(svg => {
-  //   const clipAnim = svg.querySelector('[data-anim="clip"]');
-  //   const borderAnim = svg.querySelector('[data-anim="border"]');
-
-  //   svg.addEventListener('click', e => {
-  //     e.preventDefault();
-  //     if (clipAnim) clipAnim.beginElement();
-  //     if (borderAnim) borderAnim.beginElement();
-  //   });
-  // });
-
-  //!======================
 
   triggerCardAnimation();
 
-  cardDeck.insertAdjacentHTML('beforeend', createDeckMarkup(deckCards));
+  cardDeckContainer.insertAdjacentHTML(
+    'beforeend',
+    createDeckMarkup(deckCards)
+  );
 
-  cardDeck.addEventListener('click', handleCard);
+  cardDeckContainer.addEventListener('click', handleCard);
   function handleCard() {
-    let card = cardDeck.lastElementChild;
-    card.classList.add('transition-anim');
+    if (isAnimating) return;
+    isAnimating = true;
+
+    let lastDeckCard = cardDeckContainer.lastElementChild;
+    lastDeckCard.classList.add('transition-anim');
+    // lastDeckCard.addEventListener('transitionend', )
     setTimeout(() => {
-      card.style.right = '-603px';
+      lastDeckCard.style.right = '-603px';
     }, 1000);
 
     setTimeout(() => {
       openCards.push(deckCards[deckCards.length - 1]);
       deckCards.pop();
-
       deckCards.unshift(openCards[0]);
       openCards.shift();
 
-      cardDeck.innerHTML = createDeckMarkup(deckCards);
-      //! cardDeck.insertAdjacentHTML('afterbegin');
-      openCardsContainer.innerHTML = createCardMarkup(openCards);
+      openCardReplace(openCards);
 
       triggerCardAnimation();
+      cardDeckImageReplace(deckCards[0], lastDeckCard);
+
+      isAnimating = false;
     }, 2000);
   }
 } else {
-  cardDeck.insertAdjacentHTML('beforeend', createCardMarkup(deckCards));
+  cardDeckContainer.insertAdjacentHTML(
+    'beforeend',
+    createCardMarkup(deckCards)
+  );
 }
 
 function triggerCardAnimation() {
@@ -89,4 +71,21 @@ function triggerCardAnimation() {
   }
 }
 
-// cardDeck.insertAdjacentHTML('beforeend', createMarkup(deckCards));
+function openCardReplace(openCards) {
+  const img = document.querySelector('[data-id="features__card-image"]');
+  const cardTitle = document.querySelector('.features__card-title');
+  const cardText = document.querySelector('.features__card-text');
+  cardTitle.textContent = openCards[0].title;
+  cardText.textContent = openCards[0].description;
+  img.setAttribute('href', openCards[0].src);
+}
+
+function cardDeckImageReplace({ src }, lastDeckCard) {
+  lastDeckCard.remove();
+  cardDeckContainer.insertAdjacentHTML(
+    'afterbegin',
+    `<li class="features__deck-item">
+            <img class="features__deck-img" src="${src}" />
+        </li>`
+  );
+}

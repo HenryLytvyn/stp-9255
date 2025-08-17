@@ -142,21 +142,17 @@
     border: 2px solid var(--main-color);
     border-radius: 6px;
 
-    transition: height 1s ease, border-radius 1s ease, right 1s ease,
-      width 1s ease 1s, transform 1s ease;
+    transition: height 1s linear, border-radius 1s linear, right 1s linear,
+      bottom 1s linear, width 1s linear 1s, transform 1s linear;
   }
 
   .features__deck-img {
     width: 100%;
-    height: 100%;
+    height: calc(100% + 4px);
     object-fit: cover;
-    /* transform: scale(0.887); */
-    /* transition: width 0.5s ease 1s; */
   }
 
   .features__card {
-    /* overflow: hidden; */
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,18 +162,6 @@
     top: 0;
     right: 0;
   }
-
-  /* .features__open-cards .features__card {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-  } */
-
-  /* .features__card:nth-child(1) {
-    bottom: 96px;
-    right: 162px;
-  } */
 
   .features__deck-item:nth-child(1) {
     bottom: 80px;
@@ -223,18 +207,12 @@
 
     border: 1px solid #feffe8;
     border-radius: 8px;
-    padding: 16px;
+    padding: 16px 8px;
     width: 506px;
-    height: 73px;
 
     box-shadow: 2px 2px 4px 0 rgba(255, 255, 255, 0.25);
     background: rgba(0, 32, 57, 0.8);
   }
-
-  /* .wrapper {
-    height: 0;
-    overflow: hidden;
-  } */
 
   .features__card-text {
     font-weight: 500;
@@ -265,10 +243,5 @@
     right: -519px;
     border-radius: 0;
     z-index: 1;
-    /* transform: translateX(-519px); */
   }
-
-  /* .features__deck-item.width-anim {
-    right: -603px;
-  } */
 }

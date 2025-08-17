@@ -35,7 +35,7 @@ import pvp_and_pve_desktop_2x from '/img/game-features/pvp-and-pve-desktop@2x.pn
 
 import isMobile from '../functions/isMobile';
 
-const deckCards = [
+const cards = [
   {
     id: 'pvp-pve-modes',
     title: 'PvP & PvE Modes',
@@ -142,4 +142,4 @@ function getImage({ mobile1x, mobile2x, desktop1x, desktop2x }) {
   }
 }
 
-export default deckCards;
+export default cards;
