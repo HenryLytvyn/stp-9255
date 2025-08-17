@@ -2,7 +2,7 @@ import mobileFrame from './features-img-frame-mobile-markup';
 import desktopFrame from './features-img-frame-desktop-markup';
 import isMobile from '../functions/isMobile';
 
-export default function createMarkup(cardsArr) {
+export default function createCardMarkup(cardsArr) {
   return cardsArr
     .map(card => {
       const frameTpl = isMobile() ? mobileFrame : desktopFrame;

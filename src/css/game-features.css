@@ -116,55 +116,95 @@
   }
 
   .features__cards-deck {
-    height: 866px;
-    width: 525px;
+    position: relative;
     top: 0;
     left: 0;
+
+    height: 866px;
+    width: 525px;
+
+    cursor: pointer;
+    /* height: 100%;
+    width: 100%; */
   }
 
-  .features__card {
-    overflow: hidden;
-    /* object-fit: none;
-    object-position: center; */
+  .features__deck-item {
     width: 390px;
     height: 786px;
+
+    position: absolute;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+
+    transition: height 1s ease, border-radius 1s ease, right 1s ease,
+      width 1s ease 1s, transform 1s ease;
   }
+
+  .features__deck-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* transform: scale(0.887); */
+    /* transition: width 0.5s ease 1s; */
+  }
+
+  .features__card {
+    /* overflow: hidden; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+
+  /* .features__open-cards .features__card {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+  } */
 
   /* .features__card:nth-child(1) {
     bottom: 96px;
     right: 162px;
   } */
 
-  .features__card:nth-child(1) {
+  .features__deck-item:nth-child(1) {
     bottom: 80px;
     right: 135px;
   }
 
-  .features__card:nth-child(2) {
+  .features__deck-item:nth-child(2) {
     bottom: 64px;
     right: 108px;
   }
 
-  .features__card:nth-child(3) {
+  .features__deck-item:nth-child(3) {
     bottom: 48px;
     right: 81px;
   }
 
-  .features__card:nth-child(4) {
+  .features__deck-item:nth-child(4) {
     bottom: 32px;
     right: 54px;
   }
 
-  .features__card:nth-child(5) {
+  .features__deck-item:nth-child(5) {
     bottom: 16px;
     right: 27px;
   }
 
-  .features__card:nth-child(6) {
+  .features__deck-item:nth-child(6) {
     bottom: 0;
     right: 0;
   }
@@ -219,10 +259,16 @@
     height: 866px;
   }
 
-  .features__open-cards .features__card {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
+  .features__deck-item.transition-anim {
+    height: 866px;
+    width: 554px;
+    right: -519px;
+    border-radius: 0;
+    z-index: 1;
+    /* transform: translateX(-519px); */
   }
+
+  /* .features__deck-item.width-anim {
+    right: -603px;
+  } */
 }
