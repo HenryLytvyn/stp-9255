@@ -10,6 +10,7 @@ const desktopFrame = `<svg
     <clipPath id="clip-\${id}">
       <polygon
         id="clip-poly-\${id}"
+        data-id="clip-poly"
         points="0,0 66.48,0 83.1,0 83.1,0 99.72,0 537.38,0 554,0 554,28.578 554,381.04 554,398.36 554,582.318 554,599.638 554,866 27.7,866 0,866 0,866 0,837.122"
       >
         <animate
@@ -44,6 +45,7 @@ const desktopFrame = `<svg
   <!-- РАМКА (без clip-path), с собственным id -->
   <polygon
     id="border-\${id}"
+    data-id="border-poly"
     fill="none"
     stroke="#feffe8"
     stroke-width="2"

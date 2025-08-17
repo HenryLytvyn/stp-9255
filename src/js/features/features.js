@@ -37,19 +37,20 @@ if (!isMobile()) {
     // lastDeckCard.addEventListener('transitionend', )
     setTimeout(() => {
       lastDeckCard.style.right = '-603px';
+      // lastDeckCard.style.transform = 'translateX(-603px)';
     }, 1000);
 
     setTimeout(() => {
+      resetAnimation();
       openCards.push(deckCards[deckCards.length - 1]);
       deckCards.pop();
       deckCards.unshift(openCards[0]);
       openCards.shift();
 
-      openCardReplace(openCards);
+      openCardReplace(openCards[0]);
 
-      triggerCardAnimation();
       cardDeckImageReplace(deckCards[0], lastDeckCard);
-
+      triggerCardAnimation();
       isAnimating = false;
     }, 2000);
   }
@@ -61,9 +62,8 @@ if (!isMobile()) {
 }
 
 function triggerCardAnimation() {
-  const svg = document.querySelector('[data-id="card-frame-animation"]');
-  const clipAnim = svg.querySelector('[data-anim="clip"]');
-  const borderAnim = svg.querySelector('[data-anim="border"]');
+  const clipAnim = document.querySelector('[data-anim="clip"]');
+  const borderAnim = document.querySelector('[data-anim="border"]');
 
   if (clipAnim && borderAnim) {
     clipAnim.beginElement();
@@ -71,13 +71,14 @@ function triggerCardAnimation() {
   }
 }
 
-function openCardReplace(openCards) {
+function openCardReplace({ title, description, src }) {
   const img = document.querySelector('[data-id="features__card-image"]');
   const cardTitle = document.querySelector('.features__card-title');
   const cardText = document.querySelector('.features__card-text');
-  cardTitle.textContent = openCards[0].title;
-  cardText.textContent = openCards[0].description;
-  img.setAttribute('href', openCards[0].src);
+
+  cardTitle.textContent = title;
+  cardText.textContent = description;
+  img.setAttribute('href', src);
 }
 
 function cardDeckImageReplace({ src }, lastDeckCard) {
@@ -88,4 +89,29 @@ function cardDeckImageReplace({ src }, lastDeckCard) {
             <img class="features__deck-img" src="${src}" />
         </li>`
   );
+}
+
+function resetAnimation() {
+  const svg = document.querySelector('[data-id="card-frame-animation"]');
+  if (!svg) return;
+
+  // Ищем оба аниматора по data-атрибутам
+  const anims = svg.querySelectorAll(
+    '[data-anim="clip"], [data-anim="border"]'
+  );
+  anims.forEach(anim => {
+    const poly = anim.parentElement; // <polygon>, в котором висит этот <animate>
+    if (!poly) return;
+
+    // Базовые (стартовые) точки лежат в самом атрибуте 'points' полигона —
+    // SMIL его не меняет, он меняет только «анимированное» значение.
+    const startPoints = poly.getAttribute('points');
+
+    const clone = poly.cloneNode(true); // копируем полигон вместе с <animate>
+    clone.setAttribute('points', startPoints); // явно проставим базу (на всякий)
+    poly.replaceWith(clone); // замена = мгновенный сброс
+  });
+
+  // Сброс локального времени SMIL, чтобы точно начать «с нуля»
+  svg.setCurrentTime?.(0);
 }
