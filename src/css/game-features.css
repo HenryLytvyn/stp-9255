@@ -142,8 +142,8 @@
     border: 2px solid var(--main-color);
     border-radius: 6px;
 
-    transition: height 1s linear, border-radius 1s linear, right 1s linear,
-      bottom 1s linear, width 1s linear 1s, transform 1s linear;
+    transition: height 1s ease, border-radius 1s ease, right 1s ease,
+      bottom 1s ease, width 1s ease 1s, transform 1s ease;
   }
 
   .features__deck-img {
@@ -212,6 +212,20 @@
 
     box-shadow: 2px 2px 4px 0 rgba(255, 255, 255, 0.25);
     background: rgba(0, 32, 57, 0.8);
+
+    /* clip-path: inset(50% 0 50% 0 round 8px);
+    transition: clip-path 1000ms ease; */
+    will-change: clip-path;
+  }
+
+  .features__card-title.open {
+    transition: clip-path 1000ms ease;
+    clip-path: inset(0 0 0 0 round 8px);
+  }
+
+  .features__card-title.close {
+    transition: clip-path 0ms ease;
+    clip-path: inset(50% 0 50% 0 round 8px);
   }
 
   .features__card-text {
@@ -229,6 +243,18 @@
 
     box-shadow: 2px 2px 4px 0 rgba(255, 255, 255, 0.25);
     background: rgba(0, 32, 57, 0.8);
+
+    will-change: clip-path;
+  }
+
+  .features__card-text.open {
+    transition: clip-path 1000ms ease;
+    clip-path: inset(0 0 0 0 round 8px);
+  }
+
+  .features__card-text.close {
+    transition: clip-path 0ms ease;
+    clip-path: inset(0 0 100% 0 round 8px);
   }
 
   .features__open-cards {

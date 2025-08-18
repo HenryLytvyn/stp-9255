@@ -14,8 +14,8 @@ export default function createCardMarkup(cardsArr) {
         ${frame}
         </div>
         <div class="features__card-text-wrapper">
-          <h3 class="features__card-title">${card.title}</h3>
-          <div class="wrapper"><p class="features__card-text">
+          <h3 class="features__card-title" data-id="features__card-title">${card.title}</h3>
+          <div class="wrapper"><p class="features__card-text" data-id="features__card-text">
             ${card.description}
           </p><div/>
         </div>
