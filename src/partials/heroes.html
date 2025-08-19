@@ -1,16 +1,52 @@
 <section class="heroes" id="heroes">
   <div class="container">
     <h2 class="heroes__title">Main Characters</h2>
-    <!-- <svg width="288" height="87" class="title-frame">
-      <use href="#title-frame-mobile" />
-    </svg> -->
     <load src="/partials/title-frame.html" />
+    <div class="heroes__swiper swiper" data-id="heroes__swiper">
+      <ul
+        data-id="heroes__cards-list"
+        class="heroes__cards-list swiper-wrapper"
+      ></ul>
+    </div>
+    <div class="heroes__sw-wrapper-btn">
+      <button class="heroes__swiper-btn" data-id="heroes__prev-btn">
+        <svg class="heroes__sw-icon-btn">
+          <use href="../img/sprite.svg#arrow-left"></use>
+        </svg>
+      </button>
+      <button class="heroes__swiper-btn" data-id="heroes__next-btn">
+        <svg class="heroes__sw-icon-btn">
+          <use href="../img/sprite.svg#arrow-right"></use>
+        </svg>
+      </button>
+    </div>
     <!-- Card -->
-    <div class="heroes__card">
+    <!-- <div class="heroes__card">
       <h3 class="heroes__card-title">General&nbsp;Kairos</h3>
       <p class="heroes__card-text">
         A fallen warlord known for brutal tactics and undying loyalty
       </p>
-    </div>
+      <picture class="heroes__card-picture">
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            /img/heroes/general-kairos-desktop.png    1x,
+            /img/heroes/general-kairos-desktop@2x.png 2x
+          "
+        />
+        <source
+          media="(max-width: 1199.98px)"
+          srcset="
+            /img/heroes/general-kairos-mobile.png    1x,
+            /img/heroes/general-kairos-mobile@2x.png 2x
+          "
+        />
+        <img
+          class="heroes__card-img"
+          src="/img/heroes/general-kairos-desktop.png"
+          alt=""
+        />
+      </picture>
+    </div> -->
   </div>
 </section>

@@ -33,11 +33,11 @@ import pvp_and_pve_mobile_2x from '/img/game-features/pvp-and-pve-mobile@2x.png'
 import pvp_and_pve_desktop from '/img/game-features/pvp-and-pve-desktop.png';
 import pvp_and_pve_desktop_2x from '/img/game-features/pvp-and-pve-desktop@2x.png';
 
-import isMobile from '../functions/isMobile';
+import getImage from '../functions/getImage';
 
 const cards = [
   {
-    id: 'pvp-pve-modes',
+    // id: 'pvp-pve-modes',
     title: 'PvP & PvE Modes',
     description: 'Compete globally or conquer through immersive solo campaigns',
     src: getImage({
@@ -50,7 +50,7 @@ const cards = [
   },
 
   {
-    id: 'stunning-visuals',
+    // id: 'stunning-visuals',
     title: 'Stunning Visuals',
     description:
       'Breathtaking animations, hand-drawn portraits, and dynamic environments',
@@ -64,7 +64,7 @@ const cards = [
   },
 
   {
-    id: 'dynasty-management',
+    // id: 'dynasty-management',
     title: 'Dynasty Management',
     description:
       'Manage resources, diplomacy, armies, and political stability.',
@@ -78,7 +78,7 @@ const cards = [
   },
 
   {
-    id: 'hero-system',
+    // id: 'hero-system',
     title: 'Hero System',
     description: 'Explore kingdoms, mountains, deserts, and lost temples',
     src: getImage({
@@ -91,7 +91,7 @@ const cards = [
   },
 
   {
-    id: 'interactive-storytelling',
+    // id: 'interactive-storytelling',
     title: 'Interactive Storytelling',
     description:
       'Choices affect relationships, war outcomes, and future events',
@@ -105,7 +105,7 @@ const cards = [
   },
 
   {
-    id: 'campaign-map',
+    // id: 'campaign-map',
     title: 'Massive Campaign Map',
     description: 'Explore kingdoms, mountains, deserts, and lost temples',
     src: getImage({
@@ -118,7 +118,7 @@ const cards = [
   },
 
   {
-    id: 'strategic-combat',
+    // id: 'strategic-combat',
     title: 'Deep Strategic Combat',
     description:
       'Tactical battles that challenge your mind and military precision',
@@ -131,15 +131,5 @@ const cards = [
     alt: 'angry fighters',
   },
 ];
-
-function getImage({ mobile1x, mobile2x, desktop1x, desktop2x }) {
-  const dpr = window.devicePixelRatio || 1;
-
-  if (isMobile()) {
-    return dpr > 1 ? mobile2x : mobile1x;
-  } else {
-    return dpr > 1 ? desktop2x : desktop1x;
-  }
-}
 
 export default cards;

@@ -60,8 +60,6 @@ if (!isMobile()) {
         '[data-id="features__card-image"]'
       );
 
-      console.log(newCardTitle);
-
       closeCardText(newCardTitle, newCardText);
 
       openCardReplace(openCards[0], newCardTitle, newCardText, newCardImg);
