@@ -69,13 +69,6 @@ section {
   scroll-margin-top: 60px;
 }
 
-.title-frame {
-  position: absolute;
-  transform: translateX(-50%);
-  top: 32px;
-  left: 50%;
-}
-
 /* @media screen and (max-width: 1199px) {
   
 } */
