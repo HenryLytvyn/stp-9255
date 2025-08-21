@@ -1,12 +1,24 @@
 <section class="reviews" id="reviews">
   <div class="container">
     <h2 class="reviews__title">Reviews</h2>
-    <!-- <svg width="288" height="87" class="title-frame">
-      <use href="#title-frame-mobile" />
-    </svg> -->
     <load src="/partials/title-frame.html" />
     <div class="reviews__card">
-      <h3 class="reviews__card-title">Alexander Winter</h3>
+      <div class="reviews__card-title-wrapper">
+        <h3 class="reviews__card-title">Alexander Winter</h3>
+        <!-- <svg width="282" height="72" style="z-index: 10" aria-hidden="true">
+        <use href="./img/sprite.svg#name-frame"></use>
+      </svg> -->
+
+        <svg
+          width="282"
+          height="72"
+          class="reviews__card-title-frame"
+          aria-hidden="true"
+        >
+          <use href="./img/sprite.svg#name-frame"></use>
+        </svg>
+      </div>
+
       <div class="reviews__card-text-wrapper">
         <p class="reviews__card-text">
           An epic saga of strategy and emotion. I've never cared this much about

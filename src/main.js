@@ -1,4 +1,6 @@
 import 'modern-normalize';
+import './js/scroll-locker';
+
 import './js/mobile-menu';
 import './js/section-title-animation';
 import './js/features/features';

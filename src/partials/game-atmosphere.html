@@ -6,27 +6,31 @@
     </svg> -->
     <load src="/partials/title-frame.html" />
     <div class="atmosphere__content-wrapper">
-      <picture>
-        <source
-          media="(min-width: 1200px)"
-          srcset="
-            /img/game-atmosphere/fighters-desktop.png    1x,
-            /img/game-atmosphere/fighters-desktop@2x.png 2x
-          "
-        />
-        <source
-          media="(max-width: 1199px)"
-          srcset="
-            /img/game-atmosphere/fighters-mobile.png    1x,
-            /img/game-atmosphere/fighters-mobile@2x.png 2x
-          "
-        />
-        <img
-          class="atmosphere__img"
-          src="/img/game-atmosphere/fighters-mobile.png"
-          alt="two fighters"
-        />
-      </picture>
+      <div class="atmosphere__framed framed">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              /img/game-atmosphere/fighters-desktop.png    1x,
+              /img/game-atmosphere/fighters-desktop@2x.png 2x
+            "
+          />
+          <source
+            media="(max-width: 1199px)"
+            srcset="
+              /img/game-atmosphere/fighters-mobile.png    1x,
+              /img/game-atmosphere/fighters-mobile@2x.png 2x
+            "
+          />
+          <img
+            class="atmosphere__img"
+            src="/img/game-atmosphere/fighters-mobile.png"
+            alt="two fighters"
+            loading="lazy"
+            onload="this.dataset.loaded='true'"
+          />
+        </picture>
+      </div>
       <div class="atmosphere__text-wrapper">
         <p class="atmosphere__text">
           Experience a world steeped in legend, where shifting alliances and

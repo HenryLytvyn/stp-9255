@@ -8,6 +8,6 @@
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
-    padding: 83px 36px;
+    padding: 83px 36px 60px 36px;
   }
 }

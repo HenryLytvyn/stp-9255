@@ -4,8 +4,7 @@
 .atmosphere__img {
   width: 100%;
   margin-bottom: 32px;
-  border: 2px solid var(--main-color);
-  box-shadow: 2px 2px 4px 0 rgba(255, 255, 255, 0.25);
+  /* box-shadow: 2px 2px 4px 0 rgba(255, 255, 255, 0.25); */
 }
 
 .atmosphere__text-wrapper {
@@ -28,6 +27,11 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row-reverse;
+  }
+
+  .atmosphere__framed {
+    width: 554px;
+    height: 318px;
   }
 
   .atmosphere__img {

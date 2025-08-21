@@ -1,0 +1,55 @@
+:root {
+  --frame-mask-url: url('/img/frame-mask.svg');
+  --frame-overlay-url: url('/img/frame-overlay.svg');
+}
+
+/* Базовый контейнер с настраиваемым аспектом */
+.framed {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  /* Маска — один SVG для всех карточек */
+  -webkit-mask-image: var(--frame-mask-url);
+  mask-image: var(--frame-mask-url);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+/* Картинка растягивается под контейнер */
+.framed picture,
+.framed img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.framed img {
+  object-fit: cover;
+}
+
+/* Оверлей — тот же SVG, поверх всех слоёв */
+.framed::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--frame-overlay-url);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+/* Небольшой полиш для плавной загрузки */
+.framed img {
+  object-fit: cover;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+}
+
+.framed img[data-loaded='true'] {
+  opacity: 1;
+}

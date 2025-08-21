@@ -7,7 +7,35 @@
     <load src="/partials/title-frame.html" />
     <div class="about__wrapper">
       <div class="about__card">
-        <h3 class="about__card-title">Fairy Legends: Tail Quest</h3>
+        <h3 class="about__card-title">
+          Fairy&nbsp;Legends:&nbsp;Tail&nbsp;Quest
+        </h3>
+        <div class="framed">
+          <picture>
+            <source
+              type="image/png"
+              media="(min-width: 1200px)"
+              srcset="
+                /img/about-the-game/heroes-desktop.png    1x,
+                /img/about-the-game/heroes-desktop@2x.png 2x
+              "
+            />
+            <source
+              type="image/png"
+              media="(max-width: 1199.98px)"
+              srcset="
+                /img/about-the-game/heroes-mobile.png    1x,
+                /img/about-the-game/heroes-mobile@2x.png 2x
+              "
+            />
+            <img
+              src="/img/about-the-game/heroes-desktop.png"
+              alt="the game heroes"
+              loading="lazy"
+              onload="this.dataset.loaded='true'"
+            />
+          </picture>
+        </div>
       </div>
       <div class="about__content-wrapper">
         <p class="about__text">

@@ -10,6 +10,7 @@ const logo = document.querySelector('[data-id="header__logo"]');
 
 let scrollY;
 let heroImgHight;
+let isScrollLocked = false;
 
 mobileBtn.addEventListener('click', () => {
   heroImgHight = 794;
@@ -18,10 +19,16 @@ mobileBtn.addEventListener('click', () => {
   navIcon.classList.toggle('open');
   mobileMenu.classList.toggle('open');
   mobileMenuBG.classList.toggle('open');
-  body.classList.toggle('no-scroll');
+
+  if (isScrollLocked) {
+    unlockScroll();
+    isScrollLocked = false;
+  } else {
+    lockScroll();
+    isScrollLocked = true;
+  }
 
   scrollY = document.documentElement.scrollTop;
-  console.log('scroll: ', scrollY);
   heroImgCheck(Number(scrollY));
 });
 
@@ -32,10 +39,9 @@ function closeMobileMenu() {
   navIcon.classList.remove('open');
   mobileMenu.classList.remove('open');
   mobileMenuBG.classList.remove('open');
-  body.classList.remove('no-scroll');
+  unlockScroll();
 }
 
 function heroImgCheck(scrollY) {
   mobileMenu.style.backgroundPosition = `center -${scrollY}px`;
-  console.log(scrollY);
 }

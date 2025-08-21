@@ -45,9 +45,13 @@
     grid-column: 1;
   }
 
-  .join__picture {
+  .join__framed {
     grid-row: 1 / span 2;
     grid-column: 2;
+    height: 285px;
+  }
+
+  .join__picture {
   }
 
   .join__img {

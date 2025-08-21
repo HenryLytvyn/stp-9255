@@ -56,9 +56,13 @@ h3 {
   text-transform: capitalize;
 }
 
-.no-scroll {
+/* .no-scroll {
   overflow: hidden;
 }
+
+body {
+  overflow-y: scroll;
+} */
 
 .transition-base {
   transition: color 250ms ease, background-color 250ms ease, opacity 250ms ease,
