@@ -9,7 +9,7 @@
     <script type="module" crossorigin src="/stp-9255/index.js"></script>
     <link rel="modulepreload" crossorigin href="/stp-9255/assets/vendor-CRZmPYk3.js">
     <link rel="stylesheet" crossorigin href="/stp-9255/assets/vendor-CMeNngZ5.css">
-    <link rel="stylesheet" crossorigin href="/stp-9255/assets/index-BMscSl4U.css">
+    <link rel="stylesheet" crossorigin href="/stp-9255/assets/index-Okho01FH.css">
   </head>
   <body>
     <header class="header">
@@ -101,7 +101,7 @@
 >
   <div class="gpl-btn__icon-wrapper">
     <svg class="gpl-btn__icon">
-      <use href="/stp-9255/assets/sprite-CAmHrQjs.svg#google-play"></use>
+      <use href="/stp-9255/assets/sprite-CosCc2m8.svg#google-play"></use>
     </svg>
   </div>
   <span class="gpl-btn__text">Download on Google Play</span>
@@ -183,7 +183,29 @@
 
     <div class="about__wrapper">
       <div class="about__card">
-        <h3 class="about__card-title">Fairy Legends: Tail Quest</h3>
+        <h3 class="about__card-title">
+          Fairy&nbsp;Legends:&nbsp;Tail&nbsp;Quest
+        </h3>
+        <div class="framed">
+          <picture>
+            <source
+              type="image/png"
+              media="(min-width: 1200px)"
+              srcset="/stp-9255/assets/heroes-desktop-DVtRplux.png 1x, /stp-9255/assets/heroes-desktop@2x-D1hMk1wt.png 2x"
+            />
+            <source
+              type="image/png"
+              media="(max-width: 1199.98px)"
+              srcset="/stp-9255/assets/heroes-mobile-DBxpFyku.png 1x, /stp-9255/assets/heroes-mobile@2x-CVWlAWG1.png 2x"
+            />
+            <img
+              src="/stp-9255/assets/heroes-desktop-DVtRplux.png"
+              alt="the game heroes"
+              loading="lazy"
+              onload="this.dataset.loaded='true'"
+            />
+          </picture>
+        </div>
       </div>
       <div class="about__content-wrapper">
         <p class="about__text">
@@ -424,7 +446,7 @@
         data-id="heroes__prev-btn"
       >
         <svg class="heroes__sw-icon-btn">
-          <use href="/stp-9255/assets/sprite-CAmHrQjs.svg#arrow-left"></use>
+          <use href="/stp-9255/assets/sprite-CosCc2m8.svg#arrow-left"></use>
         </svg>
       </button>
       <button
@@ -432,7 +454,7 @@
         data-id="heroes__next-btn"
       >
         <svg class="heroes__sw-icon-btn">
-          <use href="/stp-9255/assets/sprite-CAmHrQjs.svg#arrow-right"></use>
+          <use href="/stp-9255/assets/sprite-CosCc2m8.svg#arrow-right"></use>
         </svg>
       </button>
     </div>
@@ -484,21 +506,25 @@
 </svg>
 
     <div class="atmosphere__content-wrapper">
-      <picture>
-        <source
-          media="(min-width: 1200px)"
-          srcset="/stp-9255/assets/fighters-desktop-Cum1xaPd.png 1x, /stp-9255/assets/fighters-desktop@2x-8bkT6suh.png 2x"
-        />
-        <source
-          media="(max-width: 1199px)"
-          srcset="/stp-9255/assets/fighters-mobile-CuoEzjim.png 1x, /stp-9255/assets/fighters-mobile@2x-DlkriRai.png 2x"
-        />
-        <img
-          class="atmosphere__img"
-          src="/stp-9255/assets/fighters-mobile-CuoEzjim.png"
-          alt="two fighters"
-        />
-      </picture>
+      <div class="atmosphere__framed framed">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="/stp-9255/assets/fighters-desktop-Cum1xaPd.png 1x, /stp-9255/assets/fighters-desktop@2x-8bkT6suh.png 2x"
+          />
+          <source
+            media="(max-width: 1199px)"
+            srcset="/stp-9255/assets/fighters-mobile-CuoEzjim.png 1x, /stp-9255/assets/fighters-mobile@2x-DlkriRai.png 2x"
+          />
+          <img
+            class="atmosphere__img"
+            src="/stp-9255/assets/fighters-mobile-CuoEzjim.png"
+            alt="two fighters"
+            loading="lazy"
+            onload="this.dataset.loaded='true'"
+          />
+        </picture>
+      </div>
       <div class="atmosphere__text-wrapper">
         <p class="atmosphere__text">
           Experience a world steeped in legend, where shifting alliances and
@@ -521,9 +547,6 @@
       <section class="reviews" id="reviews">
   <div class="container">
     <h2 class="reviews__title">Reviews</h2>
-    <!-- <svg width="288" height="87" class="title-frame">
-      <use href="#title-frame-mobile" />
-    </svg> -->
     <svg
   class="title-frame title-frame__mobile"
   width="288"
@@ -557,7 +580,22 @@
 </svg>
 
     <div class="reviews__card">
-      <h3 class="reviews__card-title">Alexander Winter</h3>
+      <div class="reviews__card-title-wrapper">
+        <h3 class="reviews__card-title">Alexander Winter</h3>
+        <!-- <svg width="282" height="72" style="z-index: 10" aria-hidden="true">
+        <use href="./img/sprite.svg#name-frame"></use>
+      </svg> -->
+
+        <svg
+          width="282"
+          height="72"
+          class="reviews__card-title-frame"
+          aria-hidden="true"
+        >
+          <use href="/stp-9255/assets/sprite-CosCc2m8.svg#name-frame"></use>
+        </svg>
+      </div>
+
       <div class="reviews__card-text-wrapper">
         <p class="reviews__card-text">
           An epic saga of strategy and emotion. I've never cared this much about
@@ -572,22 +610,26 @@
       <section class="join">
   <div class="container">
     <h2 class="join__title">Begin Your Legend Now!</h2>
-    <picture class="join__picture">
-      <source
-        media="(min-width: 1200px)"
-        srcset="/stp-9255/assets/heroes-desktop-L6Fg1EZC.png 1x, /stp-9255/assets/heroes-desktop@2x-LugaTrZc.png 2x"
-      />
-      <source
-        media="(max-width: 1199px)"
-        srcset="/stp-9255/assets/heroes-mobile-tiW2KDTM.png 1x, /stp-9255/assets/heroes-mobile@2x-ut0nS4m-.png 2x"
-      />
+    <div class="join__framed framed">
+      <picture class="join__picture">
+        <source
+          media="(min-width: 1200px)"
+          srcset="/stp-9255/assets/heroes-desktop-L6Fg1EZC.png 1x, /stp-9255/assets/heroes-desktop@2x-LugaTrZc.png 2x"
+        />
+        <source
+          media="(max-width: 1199px)"
+          srcset="/stp-9255/assets/heroes-mobile-tiW2KDTM.png 1x, /stp-9255/assets/heroes-mobile@2x-ut0nS4m-.png 2x"
+        />
 
-      <img
-        class="join__img"
-        src="/stp-9255/assets/heroes-mobile-tiW2KDTM.png"
-        alt="game heroes"
-      />
-    </picture>
+        <img
+          class="join__img"
+          src="/stp-9255/assets/heroes-mobile-tiW2KDTM.png"
+          alt="game heroes"
+          loading="lazy"
+          onload="this.dataset.loaded='true'"
+        />
+      </picture>
+    </div>
     <div class="join__content-wrapper">
       <p class="join__label">Download Dynasty</p>
       <p class="join__cta">Fallen & Rise and Forge Your Path to Glory!</p>
@@ -600,7 +642,7 @@
 >
   <div class="gpl-btn__icon-wrapper">
     <svg class="gpl-btn__icon">
-      <use href="/stp-9255/assets/sprite-CAmHrQjs.svg#google-play"></use>
+      <use href="/stp-9255/assets/sprite-CosCc2m8.svg#google-play"></use>
     </svg>
   </div>
   <span class="gpl-btn__text">Download on Google Play</span>
