@@ -1,0 +1,25 @@
+.rating {
+  display: flex;
+  justify-content: flex-end;
+  /* gap: 0.3rem; */
+}
+
+.rating__star-filled {
+  fill: gold;
+  stroke: rgba(255, 217, 0, 0);
+}
+
+.rating__star-void {
+  fill: gold;
+  stroke: rgba(255, 217, 0, 0);
+}
+
+.rating__star-mask {
+}
+
+@media screen and (min-width: 1200px) {
+  .rating {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

@@ -1,10 +1,23 @@
 .reviews {
+  background-image: image-set(
+    url(../img/ht-play_reviews-bg-mobile.png) 1x,
+    url(../img/ht-play_reviews-bg-mobile@2x.png) 2x
+  );
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 .container {
 }
 
 .reviews__title {
+}
+
+.reviews__swiper {
+  margin-bottom: 24px;
+}
+
+.reviews__cards-list {
 }
 
 .reviews__card {
@@ -15,6 +28,14 @@
   height: 276px;
 
   background-color: rgba(0, 32, 57, 0.8);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__card-content-wrapper {
+  width: 100%;
+  height: 100%;
 }
 
 .reviews__card-title-wrapper {
@@ -46,7 +67,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(100% - 106px);
+  height: calc(100% - 70px);
 }
 
 .reviews__card-text {
@@ -66,9 +87,25 @@
   }
 
   .reviews__card {
+    flex-direction: row;
+    justify-content: space-between;
     padding: 16px;
     width: 363px;
     height: 248px;
+  }
+
+  .reviews__card-content-wrapper {
+    width: 282px;
+  }
+
+  .reviews__card-title-wrapper {
+    width: 100%;
+  }
+
+  .reviews__card-title {
+  }
+
+  .reviews__card-title-frame {
   }
 
   .reviews__card-text-wrapper {
