@@ -9,7 +9,7 @@
     <script type="module" crossorigin src="/stp-9255/index.js"></script>
     <link rel="modulepreload" crossorigin href="/stp-9255/assets/vendor-CRZmPYk3.js">
     <link rel="stylesheet" crossorigin href="/stp-9255/assets/vendor-CMeNngZ5.css">
-    <link rel="stylesheet" crossorigin href="/stp-9255/assets/index-Okho01FH.css">
+    <link rel="stylesheet" crossorigin href="/stp-9255/assets/index-B_b9F5ZM.css">
   </head>
   <body>
     <header class="header">
@@ -101,7 +101,7 @@
 >
   <div class="gpl-btn__icon-wrapper">
     <svg class="gpl-btn__icon">
-      <use href="/stp-9255/assets/sprite-CosCc2m8.svg#google-play"></use>
+      <use href="/stp-9255/assets/sprite-DmOx6QCu.svg#google-play"></use>
     </svg>
   </div>
   <span class="gpl-btn__text">Download on Google Play</span>
@@ -446,7 +446,7 @@
         data-id="heroes__prev-btn"
       >
         <svg class="heroes__sw-icon-btn">
-          <use href="/stp-9255/assets/sprite-CosCc2m8.svg#arrow-left"></use>
+          <use href="/stp-9255/assets/sprite-DmOx6QCu.svg#arrow-left"></use>
         </svg>
       </button>
       <button
@@ -454,7 +454,7 @@
         data-id="heroes__next-btn"
       >
         <svg class="heroes__sw-icon-btn">
-          <use href="/stp-9255/assets/sprite-CosCc2m8.svg#arrow-right"></use>
+          <use href="/stp-9255/assets/sprite-DmOx6QCu.svg#arrow-right"></use>
         </svg>
       </button>
     </div>
@@ -546,6 +546,31 @@
 
       <section class="reviews" id="reviews">
   <div class="container">
+    <!-- Star mask -->
+    <svg
+      aria-hidden="true"
+      focusable="false"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+    >
+      <defs>
+        <mask
+          id="rating__star-icon"
+          maskUnits="userSpaceOnUse"
+          maskContentUnits="userSpaceOnUse"
+          x="0"
+          y="0"
+          width="24"
+          height="24"
+        >
+          <rect width="100%" height="100%" fill="black" />
+          <polygon
+            fill="white"
+            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+          />
+        </mask>
+      </defs>
+    </svg>
+
     <h2 class="reviews__title">Reviews</h2>
     <svg
   class="title-frame title-frame__mobile"
@@ -579,29 +604,141 @@
   />
 </svg>
 
-    <div class="reviews__card">
-      <div class="reviews__card-title-wrapper">
-        <h3 class="reviews__card-title">Alexander Winter</h3>
-        <!-- <svg width="282" height="72" style="z-index: 10" aria-hidden="true">
-        <use href="./img/sprite.svg#name-frame"></use>
-      </svg> -->
 
-        <svg
-          width="282"
-          height="72"
-          class="reviews__card-title-frame"
-          aria-hidden="true"
-        >
-          <use href="/stp-9255/assets/sprite-CosCc2m8.svg#name-frame"></use>
+    <div class="reviews__swiper swiper" data-id="reviews__swiper">
+      <ul
+        data-id="reviews__cards-list"
+        class="reviews__cards-list swiper-wrapper"
+      >
+        <li class="reviews__card">
+          <div class="reviews__card-content-wrapper">
+            <div class="reviews__card-title-wrapper">
+              <h3 class="reviews__card-title">Alexander Winter</h3>
+              <svg class="reviews__card-title-frame" aria-hidden="true">
+                <use href="/stp-9255/assets/sprite-DmOx6QCu.svg#name-frame"></use>
+              </svg>
+            </div>
+            <div class="reviews__card-text-wrapper">
+              <p class="reviews__card-text">
+                An epic saga of strategy and emotion. I've never cared this much
+                about my army!
+              </p>
+            </div>
+          </div>
+
+          <div class="rating">
+            <svg
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              viewBox="0 0 24 24"
+              height="35"
+              width="35"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polygon
+                mask="url(#rating__star-icon)"
+                stroke="gold"
+                stroke-width="4"
+                fill="gold"
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              ></polygon>
+            </svg>
+
+            <svg
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              viewBox="0 0 24 24"
+              height="35"
+              width="35"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polygon
+                mask="url(#rating__star-icon)"
+                stroke="gold"
+                stroke-width="4"
+                fill="gold"
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              ></polygon>
+            </svg>
+
+            <svg
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              viewBox="0 0 24 24"
+              height="35"
+              width="35"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polygon
+                mask="url(#rating__star-icon)"
+                stroke="gold"
+                stroke-width="4"
+                fill="gold"
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              ></polygon>
+            </svg>
+
+            <svg
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              viewBox="0 0 24 24"
+              height="35"
+              width="35"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polygon
+                mask="url(#rating__star-icon)"
+                stroke="gold"
+                stroke-width="4"
+                fill="gold"
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              ></polygon>
+            </svg>
+
+            <svg
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              viewBox="0 0 24 24"
+              height="35"
+              width="35"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polygon
+                mask="url(#rating__star-icon)"
+                stroke="gold"
+                stroke-width="4"
+                fill="none"
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              ></polygon>
+            </svg>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="heroes__sw-wrapper-btn">
+      <button
+        class="heroes__swiper-btn heroes__swiper-btn-left"
+        data-id="reviews__prev-btn"
+      >
+        <svg class="heroes__sw-icon-btn">
+          <use href="/stp-9255/assets/sprite-DmOx6QCu.svg#arrow-left"></use>
         </svg>
-      </div>
-
-      <div class="reviews__card-text-wrapper">
-        <p class="reviews__card-text">
-          An epic saga of strategy and emotion. I've never cared this much about
-          my army!
-        </p>
-      </div>
+      </button>
+      <button
+        class="heroes__swiper-btn heroes__swiper-btn-right"
+        data-id="reviews__next-btn"
+      >
+        <svg class="heroes__sw-icon-btn">
+          <use href="/stp-9255/assets/sprite-DmOx6QCu.svg#arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="heroes__sw-pagin-container"
+      data-id="reviews__sw-pagin-container"
+    >
+      <!-- <div class="heroes__sw-pagin-item" data-id="heroes__sw-pagin-item"></div> -->
     </div>
   </div>
 </section>
@@ -642,7 +779,7 @@
 >
   <div class="gpl-btn__icon-wrapper">
     <svg class="gpl-btn__icon">
-      <use href="/stp-9255/assets/sprite-CosCc2m8.svg#google-play"></use>
+      <use href="/stp-9255/assets/sprite-DmOx6QCu.svg#google-play"></use>
     </svg>
   </div>
   <span class="gpl-btn__text">Download on Google Play</span>
