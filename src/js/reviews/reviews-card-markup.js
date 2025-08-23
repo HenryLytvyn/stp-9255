@@ -1,30 +1,68 @@
-const reviewsArr = [
-  {
-    name: 'Alexander Winter',
-    review:
-      'An epic saga of strategy and emotion. I’ve never cared this much about my army!',
-    grade: 5,
-  },
-  {
-    name: 'Mira Howard',
-    review: 'The decisions actually matter! Every campaign feels different',
-    grade: 5,
-  },
-  {
-    name: 'Dante Kurphy',
-    review:
-      'The mix of tactical gameplay and deep lore is masterful. Highly addictive',
-    grade: 5,
-  },
-  {
-    name: 'Selina Russel',
-    review:
-      'Heroes have actual personality — I grew attached to every general in my roster',
-    grade: 4,
-  },
-  {
-    name: 'Zhao Ling',
-    review: 'Best war strategy RPG on mobile. The visuals are on another level',
-    grade: 5,
-  },
-];
+export default function cardsMarkup(arr) {
+  return arr
+    .map(
+      ({ name, review, grade }) =>
+        `
+        <li class="reviews__card swiper-slide">
+          <div class="reviews__card-content-wrapper">
+            <div class="reviews__card-title-wrapper">
+              <h3 class="reviews__card-title">${name}</h3>
+              <svg class="reviews__card-title-frame" aria-hidden="true">
+                <use href="./img/sprite.svg#name-frame"></use>
+              </svg>
+            </div>
+            <div class="reviews__card-text-wrapper">
+              <p class="reviews__card-text">${review}</p>
+            </div>
+          </div>
+          <div class="rating">${gradeMarkup(Number(grade))}<div/>
+        </li>
+      `
+    )
+    .join('');
+}
+
+function gradeMarkup(grade) {
+  let markup = '';
+  for (let i = grade; i > 0; i -= 1) {
+    markup += `<svg
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              viewBox="0 0 24 24"
+              height="35"
+              width="35"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                href="#rating__star-icon"
+                fill="gold"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                mask="url(#rating__star-icon-mask)"
+              />
+            </svg>`;
+  }
+
+  for (let i = 5 - grade; i > 0; i -= 1) {
+    markup += `<svg
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              viewBox="0 0 24 24"
+              height="35"
+              width="35"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use
+                href="#rating__star-icon"
+                fill="none"
+                stroke="gold"
+                stroke-width="4"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                mask="url(#rating__star-icon-mask)"
+              />
+            </svg>`;
+  }
+
+  return markup;
+}

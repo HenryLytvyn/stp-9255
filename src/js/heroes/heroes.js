@@ -3,7 +3,6 @@ import 'swiper/css/bundle';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import './heroes-cards-markup';
 import cardsMarkup from './heroes-cards-markup';
 import heroesCards from './heroes-cards-array';
 import { displayBreakpoint } from '../constants';
@@ -16,9 +15,9 @@ const swiperContainer = document.querySelector('[data-id="heroes__swiper"]');
 const paginationContainer = document.querySelector(
   '[data-id="heroes__sw-pagin-container"]'
 );
-const paginationItem = document.querySelector(
-  '[data-id="heroes__sw-pagin-item"]'
-);
+// const paginationItem = document.querySelector(
+//   '[data-id="heroes__sw-pagin-item"]'
+// );
 
 container.insertAdjacentHTML('beforeend', cardsMarkup(heroesCards));
 initSwiper();

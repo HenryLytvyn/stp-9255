@@ -2,34 +2,27 @@
   <div class="container">
     <h2 class="heroes__title">Main Characters</h2>
     <load src="/partials/title-frame.html" />
+
     <div class="heroes__swiper swiper" data-id="heroes__swiper">
       <ul
         data-id="heroes__cards-list"
         class="heroes__cards-list swiper-wrapper"
       ></ul>
     </div>
-    <div class="heroes__sw-wrapper-btn">
-      <button
-        class="heroes__swiper-btn heroes__swiper-btn-left"
-        data-id="heroes__prev-btn"
-      >
-        <svg class="heroes__sw-icon-btn">
+
+    <div class="swiper__wrapper-btn">
+      <button class="swiper__btn swiper__btn-left" data-id="heroes__prev-btn">
+        <svg class="swiper__icon-btn">
           <use href="./img/sprite.svg#arrow-left"></use>
         </svg>
       </button>
-      <button
-        class="heroes__swiper-btn heroes__swiper-btn-right"
-        data-id="heroes__next-btn"
-      >
-        <svg class="heroes__sw-icon-btn">
+      <button class="swiper__btn swiper__btn-right" data-id="heroes__next-btn">
+        <svg class="swiper__icon-btn">
           <use href="./img/sprite.svg#arrow-right"></use>
         </svg>
       </button>
     </div>
-    <div
-      class="heroes__sw-pagin-container"
-      data-id="heroes__sw-pagin-container"
-    >
+    <div class="swiper__pagin-container" data-id="heroes__sw-pagin-container">
       <!-- <div class="heroes__sw-pagin-item" data-id="heroes__sw-pagin-item"></div> -->
     </div>
   </div>

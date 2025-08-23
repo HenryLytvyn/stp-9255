@@ -59,43 +59,6 @@
   position: absolute;
 }
 
-.heroes__sw-wrapper-btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.heroes__swiper-btn {
-  width: 56px;
-  height: 56px;
-  border: 1px solid var(--main-color);
-  border-radius: 4px;
-
-  padding: 16px 21px 16px 23px;
-
-  background-color: #003055;
-}
-
-.heroes__swiper-btn-left {
-  padding: 16px 23px 16px 21px;
-}
-
-.heroes__swiper-btn-right {
-  padding: 16px 21px 16px 23px;
-}
-
-.heroes__sw-icon-btn {
-  fill: var(--main-color);
-  width: 12px;
-  height: 24px;
-}
-
-.heroes__sw-pagin-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .swiper-pagination-bullet {
   border: 0.5px solid var(--main-color) !important;
   border-radius: 2px !important;
@@ -116,9 +79,6 @@
   }
 
   .heroes__cards-list {
-  }
-
-  .heroes__swiper-btn {
   }
 
   .heroes__card {

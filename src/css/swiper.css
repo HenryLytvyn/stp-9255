@@ -1,0 +1,38 @@
+.swiper__wrapper-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* height: 56px; */
+}
+
+.swiper__btn {
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+
+  padding: 16px 21px 16px 23px;
+
+  background-color: #003055;
+}
+
+.swiper__btn-left {
+  padding: 16px 23px 16px 21px;
+}
+
+.swiper__btn-right {
+  padding: 16px 21px 16px 23px;
+}
+
+.swiper__icon-btn {
+  fill: var(--main-color);
+  width: 12px;
+  height: 24px;
+}
+
+.swiper__pagin-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
