@@ -23,6 +23,7 @@ export default function cardsMarkup(arr) {
 }
 
 function gradeMarkup(grade) {
+  if (grade < 1 || grade > 5) return;
   let markup = '';
   for (let i = grade; i > 0; i -= 1) {
     markup += `<svg
