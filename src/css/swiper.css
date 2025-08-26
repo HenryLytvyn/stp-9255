@@ -12,9 +12,19 @@
   border: 1px solid var(--main-color);
   border-radius: 4px;
 
-  padding: 16px 21px 16px 23px;
+  background-color: transparent;
 
-  background-color: #003055;
+  transition: border-color 250ms ease;
+
+  /* background-color: #002744; */
+}
+
+.swiper__btn:hover {
+  border-color: #66b3ff;
+}
+
+.swiper__btn:disabled {
+  border-color: #5c6670;
 }
 
 .swiper__btn-left {
@@ -29,7 +39,25 @@
   fill: var(--main-color);
   width: 12px;
   height: 24px;
+
+  transition: fill 250ms ease;
 }
+
+.swiper__btn:hover .swiper__icon-btn {
+  fill: #66b3ff;
+}
+
+.swiper__btn:disabled .swiper__icon-btn {
+  fill: #5c6670;
+}
+
+/* .swiper__btn-left:disabled {
+  border-color: #6c7a85;
+}
+
+.swiper__btn-left:disabled .swiper__icon-btn {
+  border-color: #6c7a85;
+} */
 
 .swiper__pagin-container {
   display: flex;

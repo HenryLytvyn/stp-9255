@@ -4,10 +4,8 @@ import 'swiper/css';
 // import 'swiper/css/scrollbar';
 
 import cardsMarkup from './reviews-card-markup';
-import reviewsArr from './reviews-array';
 import { displayBreakpoint } from '../constants';
-// import actualReviews from './reviews-storage';
-import checkStorage from './reviews-storage';
+import checkStorageReviews from './reviews-storage';
 // import './reviews-storage';
 
 const itemsList = document.querySelector('[data-id="reviews__cards-list"]');
@@ -16,7 +14,7 @@ const nextBtn = document.querySelector('[data-id="reviews__next-btn"]');
 const container = document.querySelector('[data-id="reviews__swiper"]');
 // const scrollbarEl = document.querySelector('[data-id="reviews__sw-scrollbar"]');
 
-itemsList.insertAdjacentHTML('beforeend', cardsMarkup(checkStorage()));
+itemsList.insertAdjacentHTML('beforeend', cardsMarkup(checkStorageReviews()));
 initSwiper();
 
 function initSwiper() {
@@ -44,17 +42,18 @@ function initSwiper() {
         spaceBetween: 21,
       },
     },
-    on: {
-      reachBeginning() {
-        prevBtn.disabled = true;
-      },
-      fromEdge() {
-        prevBtn.disabled = false;
-        nextBtn.disabled = false;
-      },
-      reachEnd() {
-        nextBtn.disabled = true;
-      },
-    },
+    watchOverflow: true,
+    // on: {
+    //   reachBeginning() {
+    //     prevBtn.disabled = true;
+    //   },
+    //   fromEdge() {
+    //     prevBtn.disabled = false;
+    //     nextBtn.disabled = false;
+    //   },
+    //   reachEnd() {
+    //     nextBtn.disabled = true;
+    //   },
+    // },
   });
 }
