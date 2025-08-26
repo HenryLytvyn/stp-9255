@@ -8,10 +8,9 @@
   --secondary-font: 'Delius Unicase', sans-serif;
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-  overscroll-behavior: none;
-}
+} */
 
 body {
   position: relative;
@@ -31,6 +30,7 @@ body {
     #043558 70.19%,
     #003053 100%
   );
+  overscroll-behavior: none;
 }
 
 h1,
