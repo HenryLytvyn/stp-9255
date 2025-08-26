@@ -10,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 body {
@@ -19,6 +20,10 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: var(--main-color);
+}
+
+html,
+body {
   background: linear-gradient(
     90deg,
     #093e64 0%,
