@@ -19,12 +19,13 @@
   /* background-color: #002744; */
 }
 
-.swiper__btn:hover {
+.swiper__btn:active {
   border-color: #66b3ff;
 }
 
 .swiper__btn:disabled {
   border-color: #5c6670;
+  cursor: default;
 }
 
 .swiper__btn-left {
@@ -43,7 +44,7 @@
   transition: fill 250ms ease;
 }
 
-.swiper__btn:hover .swiper__icon-btn {
+.swiper__btn:active .swiper__icon-btn {
   fill: #66b3ff;
 }
 
@@ -63,4 +64,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .swiper__btn:hover {
+    border-color: #66b3ff;
+  }
+
+  .swiper__btn:hover .swiper__icon-btn {
+    fill: #66b3ff;
+  }
+
+  .swiper__btn:disabled {
+    border-color: #5c6670;
+  }
+
+  .swiper__btn:disabled .swiper__icon-btn {
+    fill: #5c6670;
+  }
 }
