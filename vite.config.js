@@ -11,6 +11,7 @@ export default defineConfig(({ command }) => {
     },
     root: 'src',
     build: {
+      assetsInlineLimit: 0,
       sourcemap: true,
       rollupOptions: {
         input: glob.sync('./src/*.html'),
