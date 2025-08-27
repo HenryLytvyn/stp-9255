@@ -1,7 +1,7 @@
 export default function cardsMarkup(arr) {
   return arr
     .map(
-      ({ name, review, grade }) =>
+      ({ name, comments, grade }) =>
         `
         <li class="reviews__card swiper-slide">
           <div class="reviews__card-content-wrapper">
@@ -12,10 +12,10 @@ export default function cardsMarkup(arr) {
               </svg>
             </div>
             <div class="reviews__card-text-wrapper">
-              <p class="reviews__card-text">${review}</p>
+              <p class="reviews__card-text">${comments}</p>
             </div>
           </div>
-          <div class="rating">${gradeMarkup(Number(grade))}<div/>
+          <div class="reviews__rating">${gradeMarkup(Number(grade))}</div>
         </li>
       `
     )

@@ -8,9 +8,9 @@
   --secondary-font: 'Delius Unicase', sans-serif;
 }
 
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
 body {
   position: relative;

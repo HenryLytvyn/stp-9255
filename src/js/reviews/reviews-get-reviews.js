@@ -4,7 +4,7 @@ import reviewsArr from './reviews-array';
 
 // document.addEventListener('DOMContentLoaded', checkStorage);
 
-export default function checkStorageReviews() {
+export default function getReviews() {
   let reviewsSt;
   try {
     reviewsSt = JSON.parse(localStorage.getItem('reviews'));

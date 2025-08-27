@@ -1,0 +1,121 @@
+.review-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.review-form__form {
+  background: #043558;
+  border-radius: 8px;
+  padding: 32px 20px 26px;
+  width: 288px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  position: relative;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form__close-btn {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  margin-left: auto;
+  margin-bottom: 24px;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form__close-btn:hover,
+.review-form__close-btn:focus,
+.review-form__close-btn:active {
+  background-color: #002844;
+}
+
+.review-form__btn-icon {
+  width: 10px;
+  height: 10px;
+  fill: var(--main-color);
+}
+
+.review-form__rating {
+  display: flex;
+  justify-content: center;
+}
+
+.review-form__field {
+  padding: 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.review-form__input-name,
+.review-form__textarea-comm {
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  outline: transparent;
+  padding: 10px;
+}
+
+.review-form__input-name:focus,
+.review-form__textarea-comm:focus {
+  border-color: var(--button-bg-color);
+}
+
+.review-form__textarea-comm {
+  height: 200px;
+  resize: none;
+}
+
+.review-form__submit-btn {
+  font-weight: 500;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+
+  color: var(--main-color);
+  background-color: var(--button-bg-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .review-form__form {
+    width: 500px;
+  }
+}
