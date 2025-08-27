@@ -26,6 +26,7 @@
   border-radius: 8px;
   padding: 7px;
   width: 100%;
+  margin-right: 20px !important;
   /* height: 276px; */
 
   background-color: rgba(0, 32, 57, 0.8);
