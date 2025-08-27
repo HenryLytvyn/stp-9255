@@ -1,3 +1,5 @@
+import sprite from '/img/sprite.svg';
+
 export default function cardsMarkup(arr) {
   return arr
     .map(
@@ -8,7 +10,7 @@ export default function cardsMarkup(arr) {
             <div class="reviews__card-title-wrapper">
               <h3 class="reviews__card-title">${name}</h3>
               <svg class="reviews__card-title-frame" aria-hidden="true">
-                <use href="./img/sprite.svg#name-frame"></use>
+                <use href="${sprite}#name-frame"></use>
               </svg>
             </div>
             <div class="reviews__card-text-wrapper">
