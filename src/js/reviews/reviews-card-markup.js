@@ -10,7 +10,7 @@ export default function cardsMarkup(arr) {
             <div class="reviews__card-title-wrapper">
               <h3 class="reviews__card-title">${name}</h3>
               <svg class="reviews__card-title-frame" aria-hidden="true">
-                <use href="${sprite}#name-frame"></use>
+                <use href="${sprite}#name-frame" xlink:href="${sprite}#name-frame">></use>
               </svg>
             </div>
             <div class="reviews__card-text-wrapper">
