@@ -6,6 +6,9 @@
 
   --main-font: 'Poppins', sans-serif;
   --secondary-font: 'Delius Unicase', sans-serif;
+
+  /* --marker-size: 7px;
+  --marker-gap: 7px; */
 }
 
 html {
@@ -60,14 +63,24 @@ h3 {
   text-transform: capitalize;
 }
 
+section {
+  scroll-margin-top: 60px;
+}
+
 .transition-base {
   transition: color 250ms ease, background-color 250ms ease, opacity 250ms ease,
     box-shadow 250ms ease;
 }
 
-section {
-  scroll-margin-top: 60px;
-}
+/* .custom-marker {
+  display: inline-block;
+  width: var(--marker-size);
+  height: var(--marker-size);
+  background-color: var(--main-color);
+  border-radius: 50%;
+  margin-right: var(--marker-gap);
+  vertical-align: middle;
+} */
 
 @media screen and (min-width: 1200px) {
   h1 {

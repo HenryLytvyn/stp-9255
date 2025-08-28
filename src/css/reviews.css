@@ -115,7 +115,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 16px;
-    width: calc((100% - 42px) / 3) !important;
+    width: 362px !important;
     height: 248px;
     margin-right: 21px !important;
   }
