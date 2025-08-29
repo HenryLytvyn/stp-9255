@@ -9,6 +9,8 @@
 }
 
 .privacy__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .privacy__home-link {
@@ -38,7 +40,7 @@
   letter-spacing: 0.02em;
 
   text-align: left;
-  text-transform: capitalize;
+  text-transform: none;
   margin-bottom: 24px;
   color: var(--main-color);
 }
@@ -66,7 +68,7 @@
 .privacy__list {
 }
 
-.privacy__item {
+.privacy__item:not(:last-child) {
   margin-bottom: 24px;
 }
 
@@ -78,7 +80,7 @@
   letter-spacing: 0.02em;
 
   text-align: left;
-  text-transform: capitalize;
+  text-transform: none;
   margin-bottom: 6px;
   color: var(--main-color);
 }
@@ -93,11 +95,64 @@
   width: 258px;
   margin-right: 0;
   margin-left: auto;
+  margin-bottom: 4px;
   list-style-type: disc;
-  /* list-style-position: inside; */
 }
 
 .privacy__subitem {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .privacy__body {
+  }
+
+  .privacy__container {
+  }
+
+  .privacy__home-link-wrapper {
+  }
+
+  .privacy__home-link {
+    font-size: 16px;
+    margin-bottom: 60px;
+  }
+
+  .privacy__home-link-icon {
+  }
+
+  .privacy__home-link-text {
+  }
+
+  .privacy__title {
+  }
+
+  .privacy__update-date {
+  }
+
+  .privacy__description {
+  }
+
+  .privacy__link {
+  }
+
+  .privacy__list {
+  }
+
+  .privacy__item {
+  }
+
+  .privacy__item-title {
+  }
+
+  .privacy__item-description {
+  }
+
+  .privacy__sublist {
+    width: 1098px;
+  }
+
+  .privacy__subitem {
+  }
 }
