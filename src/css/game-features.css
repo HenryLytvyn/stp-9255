@@ -15,37 +15,48 @@
   height: 486px;
 }
 
-.features__card {
+.features__deck-item {
+  display: flex;
   position: absolute;
   width: 288px;
   height: 450px;
 }
 
-.features__card:nth-child(1) {
+.features__card {
+  display: none;
+}
+
+/* .features__card {
+  position: absolute;
+  width: 288px;
+  height: 450px;
+} */
+
+.features__deck-item:nth-child(1) {
   bottom: 36px;
 }
 
-.features__card:nth-child(2) {
+.features__deck-item:nth-child(2) {
   bottom: 30px;
 }
 
-.features__card:nth-child(3) {
+.features__deck-item:nth-child(3) {
   bottom: 24px;
 }
 
-.features__card:nth-child(4) {
+.features__deck-item:nth-child(4) {
   bottom: 18px;
 }
 
-.features__card:nth-child(5) {
+.features__deck-item:nth-child(5) {
   bottom: 12px;
 }
 
-.features__card:nth-child(6) {
+.features__deck-item:nth-child(6) {
   bottom: 6px;
 }
 
-.features__card:nth-child(7) {
+.features__deck-item:nth-child(7) {
   bottom: 0;
 }
 

@@ -23,6 +23,8 @@ export default function selectImage(images, alt, section) {
           class="${section}__card-img"
           src="${mobile1x}"
           alt="${alt}"
+          loading="lazy"
+          onload="this.dataset.loaded='true'"
         />
       </picture>
         `;

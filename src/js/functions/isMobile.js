@@ -6,18 +6,25 @@ import { displayBreakpoint } from '../constants';
 // }
 
 let isMobile = window.innerWidth < displayBreakpoint;
+const isMobileSubscribers = [];
 
 function updateIsMobile() {
-  isMobile = window.innerWidth < displayBreakpoint;
+  const newValue = window.innerWidth < displayBreakpoint;
+  if (newValue !== isMobile) {
+    isMobile = newValue;
+    isMobileSubscribers.forEach(callback => callback());
+    console.log(isMobileSubscribers);
+  }
 }
 
 // слушатель будет обновлять переменную при изменении окна
 window.addEventListener('resize', updateIsMobile);
 
-// можно сразу вызвать, чтобы значение было актуальным
-updateIsMobile();
+export function IsMobileChange(callback) {
+  isMobileSubscribers.push(callback);
+}
 
-// теперь в любом месте кода можно использовать:
-console.log(isMobile); // true / false
-
-export default isMobile;
+export function getIsMobile() {
+  return isMobile;
+}
+// export default isMobile;

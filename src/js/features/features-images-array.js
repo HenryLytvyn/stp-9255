@@ -33,8 +33,6 @@ import pvp_and_pve_mobile_2x from '/img/game-features/pvp-and-pve-mobile@2x.png'
 import pvp_and_pve_desktop from '/img/game-features/pvp-and-pve-desktop.png';
 import pvp_and_pve_desktop_2x from '/img/game-features/pvp-and-pve-desktop@2x.png';
 
-import getImage from '../functions/getImage';
-
 const cards = [
   {
     // id: 'pvp-pve-modes',
