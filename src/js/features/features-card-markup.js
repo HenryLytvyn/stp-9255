@@ -1,25 +1,25 @@
 import mobileFrame from './features-img-frame-mobile-markup';
 import desktopFrame from './features-img-frame-desktop-markup';
 import isMobile from '../functions/isMobile';
+import getImage from '../functions/getImage';
 
 export default function createCardMarkup(cardsArr) {
   return cardsArr
-    .map(card => {
-      const frameTpl = isMobile() ? mobileFrame : desktopFrame;
+    .map(({ title, images, id, description }) => {
+      const frameTpl = isMobile ? mobileFrame : desktopFrame;
       const frame = frameTpl
-        .replaceAll('${cardSrc}', card.src)
-        .replaceAll('${id}', card.id);
-      return `<li class="features__card">
+        .replaceAll('${cardSrc}', getImage(images))
+        .replaceAll('${id}', id);
+      return `<div class="features__card">
 
         ${frame}
-        </div>
         <div class="features__card-text-wrapper">
-          <h3 class="features__card-title" data-id="features__card-title">${card.title}</h3>
-          <div class="wrapper"><p class="features__card-text" data-id="features__card-text">
-            ${card.description}
-          </p><div/>
+          <h3 class="features__card-title" data-id="features__card-title">${title}</h3>
+          <p class="features__card-text" data-id="features__card-text">
+            ${description}
+          </p>
         </div>
-      </li>`;
+      </div>`;
     })
     .join('');
 }

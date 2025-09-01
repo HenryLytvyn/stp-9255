@@ -90,6 +90,16 @@
   background: rgba(0, 32, 57, 0.8);
 }
 
+@media screen and (max-width: 1199.98px) {
+  .features__open-cards {
+    display: none;
+  }
+
+  /* .features__deck-item {
+    display: none;
+  } */
+}
+
 @media screen and (min-width: 1200px) {
   .features {
   }
@@ -146,7 +156,12 @@
       bottom 1s ease, width 1s ease 1s, transform 1s ease;
   }
 
-  .features__deck-img {
+  .features__card-picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  .features__card-img {
     width: 100%;
     height: calc(100% + 4px);
     object-fit: cover;

@@ -52,14 +52,14 @@ function closeForm() {
 function handleForm(event) {
   event.preventDefault();
 
-  const userFeedback = getFormData(event);
+  const userFeedback = getFormData();
   reviewsUpdate(userFeedback);
 
   closeForm();
 }
 
-function getFormData(event) {
-  event.preventDefault();
+function getFormData() {
+  // event.preventDefault();
 
   const formData = new FormData(form);
   console.log(Object.fromEntries(formData.entries()));
@@ -72,6 +72,5 @@ function reviewsUpdate(newReview) {
 
   localStorage.setItem('reviews', JSON.stringify(reviewsArr));
 
-  // itemsList.insertAdjacentHTML('afterbegin', cardsMarkup([newReview]));
-  itemsList.innerHTML = cardsMarkup(getReviews());
+  itemsList.insertAdjacentHTML('afterbegin', cardsMarkup([newReview]));
 }

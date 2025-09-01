@@ -2,23 +2,27 @@ import isMobile from '../functions/isMobile';
 import createDeckMarkup from './features-deck-markup';
 import createCardMarkup from './features-card-markup';
 import cards from './features-images-array';
+import selectImage from '../functions/select-image';
+import getImage from '../functions/getImage';
+// import selectImage from '../functions/select-image';
 
+export const sectionName = 'features';
 const cardDeckContainer = document.querySelector(
   '[data-id="features__cards-deck"]'
 );
-const openCardsContainer = document.querySelector(
+const openCardContainer = document.querySelector(
   '[data-id="features__open-cards"]'
 );
 
 let deckCards = [...cards];
 let isAnimating = false;
 
-if (!isMobile()) {
-  const openCards = [];
-  openCards.push(deckCards[deckCards.length - 1]);
+if (!isMobile) {
+  const openCard = [];
+  openCard.push(deckCards[deckCards.length - 1]);
   deckCards.pop();
 
-  openCardsContainer.innerHTML = `${createCardMarkup(openCards)}`;
+  openCardContainer.innerHTML = `${createCardMarkup(openCard)}`;
 
   triggerCardAnimation();
 
@@ -45,10 +49,10 @@ if (!isMobile()) {
 
     setTimeout(() => {
       // resetAnimation();
-      openCards.push(deckCards[deckCards.length - 1]);
+      openCard.push(deckCards[deckCards.length - 1]);
       deckCards.pop();
-      deckCards.unshift(openCards[0]);
-      openCards.shift();
+      deckCards.unshift(openCard[0]);
+      openCard.shift();
 
       const newCardTitle = document.querySelector(
         '[data-id="features__card-title"]'
@@ -57,12 +61,12 @@ if (!isMobile()) {
         '[data-id="features__card-text"]'
       );
       const newCardImg = document.querySelector(
-        '[data-id="features__card-image"]'
+        '[data-id="features__open-card-image"]'
       );
 
       closeCardText(newCardTitle, newCardText);
 
-      openCardReplace(openCards[0], newCardTitle, newCardText, newCardImg);
+      openCardReplace(openCard[0], newCardTitle, newCardText, newCardImg);
 
       cardDeckImageReplace(deckCards[0], lastDeckCard);
 
@@ -94,14 +98,14 @@ function triggerCardAnimation() {
 }
 
 function openCardReplace(
-  { title, description, src },
+  { title, description, images },
   newCardTitle,
   newCardText,
   newCardImg
 ) {
   newCardTitle.textContent = title;
   newCardText.textContent = description;
-  newCardImg.setAttribute('href', src);
+  newCardImg.setAttribute('href', getImage(images));
 }
 
 function openCardText(title, text) {
@@ -118,14 +122,14 @@ function closeCardText(title, text) {
   text.classList.remove('open');
 }
 
-function cardDeckImageReplace({ src }, lastDeckCard) {
+function cardDeckImageReplace({ images, alt }, lastDeckCard) {
   setTimeout(() => {
     lastDeckCard.remove();
   }, 50);
   cardDeckContainer.insertAdjacentHTML(
     'afterbegin',
     `<li class="features__deck-item">
-            <img class="features__deck-img" src="${src}" />
-        </li>`
+      ${selectImage(images, alt, sectionName)}
+    </li>`
   );
 }

@@ -1,13 +1,15 @@
 import mobileFrame from './features-img-frame-mobile-markup';
 import desktopFrame from './features-img-frame-desktop-markup';
-import isMobile from '../functions/isMobile';
+// import isMobile from '../functions/isMobile';
+import selectImage from '../functions/select-image';
+import { sectionName } from './features';
 
 export default function createDeckMarkup(cardsArr) {
   return cardsArr
     .map(
-      card => `
+      ({ images, alt }) => `
         <li class="features__deck-item">
-            <img class="features__deck-img" src="${card.src}" />
+            ${selectImage(images, alt, sectionName)}
         </li>`
     )
     .join('');

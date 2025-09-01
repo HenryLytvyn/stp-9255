@@ -40,12 +40,12 @@ const cards = [
     // id: 'pvp-pve-modes',
     title: 'PvP & PvE Modes',
     description: 'Compete globally or conquer through immersive solo campaigns',
-    src: getImage({
+    images: {
       mobile1x: pvp_and_pve_mobile,
       mobile2x: pvp_and_pve_mobile_2x,
       desktop1x: pvp_and_pve_desktop,
       desktop2x: pvp_and_pve_desktop_2x,
-    }),
+    },
     alt: 'game heroes',
   },
 
@@ -54,12 +54,12 @@ const cards = [
     title: 'Stunning Visuals',
     description:
       'Breathtaking animations, hand-drawn portraits, and dynamic environments',
-    src: getImage({
+    images: {
       mobile1x: stunning_visuals_mobile,
       mobile2x: stunning_visuals_mobile_2x,
       desktop1x: stunning_visuals_desktop,
       desktop2x: stunning_visuals_desktop_2x,
-    }),
+    },
     alt: 'game heroes and the dragon',
   },
 
@@ -68,12 +68,12 @@ const cards = [
     title: 'Dynasty Management',
     description:
       'Manage resources, diplomacy, armies, and political stability.',
-    src: getImage({
+    images: {
       mobile1x: dynasty_management_mobile,
       mobile2x: dynasty_management_mobile_2x,
       desktop1x: dynasty_management_desktop,
       desktop2x: dynasty_management_desktop_2x,
-    }),
+    },
     alt: 'game heroes',
   },
 
@@ -81,12 +81,12 @@ const cards = [
     // id: 'hero-system',
     title: 'Hero System',
     description: 'Explore kingdoms, mountains, deserts, and lost temples',
-    src: getImage({
+    images: {
       mobile1x: hero_system_mobile,
       mobile2x: hero_system_mobile_2x,
       desktop1x: hero_system_desktop,
       desktop2x: hero_system_desktop_2x,
-    }),
+    },
     alt: 'game heroes',
   },
 
@@ -95,12 +95,12 @@ const cards = [
     title: 'Interactive Storytelling',
     description:
       'Choices affect relationships, war outcomes, and future events',
-    src: getImage({
+    images: {
       mobile1x: interactive_storytelling_mobile,
       mobile2x: interactive_storytelling_mobile_2x,
       desktop1x: interactive_storytelling_desktop,
       desktop2x: interactive_storytelling_desktop_2x,
-    }),
+    },
     alt: 'game heroes',
   },
 
@@ -108,12 +108,12 @@ const cards = [
     // id: 'campaign-map',
     title: 'Massive Campaign Map',
     description: 'Explore kingdoms, mountains, deserts, and lost temples',
-    src: getImage({
+    images: {
       mobile1x: campaign_map_mobile,
       mobile2x: campaign_map_mobile_2x,
       desktop1x: campaign_map_desktop,
       desktop2x: campaign_map_desktop_2x,
-    }),
+    },
     alt: 'games map',
   },
 
@@ -122,12 +122,12 @@ const cards = [
     title: 'Deep Strategic Combat',
     description:
       'Tactical battles that challenge your mind and military precision',
-    src: getImage({
+    images: {
       mobile1x: strategic_combat_mobile,
       mobile2x: strategic_combat_mobile_2x,
       desktop1x: strategic_combat_desktop,
       desktop2x: strategic_combat_desktop_2x,
-    }),
+    },
     alt: 'angry fighters',
   },
 ];
