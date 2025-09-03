@@ -27,6 +27,8 @@ function renderCards() {
     cardDeckContainer.removeEventListener('click', handleCardRef);
     handleCardRef = null;
   }
+
+  // DESKTOP
   if (!getIsMobile()) {
     let deckCards = [...cards];
     const openCard = [];
@@ -46,47 +48,61 @@ function renderCards() {
 
       const lastDeckCard = cardDeckContainer.lastElementChild;
 
+      // FIRST TRANSITION
       lastDeckCard.classList.add('transition-anim');
+
+      // SECOND TRANSITION
       setTimeout(() => {
         lastDeckCard.style.right = '-603px';
       }, 1000);
 
-      setTimeout(() => {
-        openCard.push(deckCards[deckCards.length - 1]);
-        deckCards.pop();
-        deckCards.unshift(openCard[0]);
-        openCard.shift();
+      // THIRD TRANSITION
 
-        const newCardTitle = document.querySelector(
-          '[data-id="features__card-title"]'
-        );
-        const newCardText = document.querySelector(
-          '[data-id="features__card-text"]'
-        );
-        const newCardImg = document.querySelector(
-          '[data-id="features__open-card-image"]'
-        );
+      lastDeckCard.addEventListener('transitionend', onTransitionEnd);
 
-        closeCardText(newCardTitle, newCardText);
-
-        openCardReplace(openCard[0], newCardTitle, newCardText, newCardImg);
-
-        cardDeckImageReplace(deckCards[0], lastDeckCard);
-
-        triggerCardAnimation();
-
-        setTimeout(() => {
-          openCardText(newCardTitle, newCardText);
-        }, 100);
-
-        cardDeckContainer.style.cursor = 'pointer';
-        isAnimating = false;
-      }, 2000);
+      function onTransitionEnd(e) {
+        if (e.propertyName !== 'width') return;
+        handleTransitionEnd(lastDeckCard);
+        lastDeckCard.removeEventListener('transitionend', onTransitionEnd);
+      }
     };
 
+    function handleTransitionEnd(lastDeckCard) {
+      openCard.push(deckCards[deckCards.length - 1]);
+      deckCards.pop();
+      deckCards.unshift(openCard[0]);
+      openCard.shift();
+
+      const newCardTitle = document.querySelector(
+        '[data-id="features__card-title"]'
+      );
+      const newCardText = document.querySelector(
+        '[data-id="features__card-text"]'
+      );
+      const newCardImg = document.querySelector(
+        '[data-id="features__open-card-image"]'
+      );
+
+      closeCardText(newCardTitle, newCardText);
+
+      openCardReplace(openCard[0], newCardTitle, newCardText, newCardImg);
+
+      cardDeckImageReplace(deckCards[0], lastDeckCard);
+
+      triggerCardAnimation();
+
+      setTimeout(() => {
+        openCardText(newCardTitle, newCardText);
+      }, 100);
+
+      cardDeckContainer.style.cursor = 'pointer';
+      isAnimating = false;
+    }
+
     cardDeckContainer.addEventListener('click', handleCardRef);
+    cardDeckContainer.style.cursor = 'pointer';
   } else {
-    // cardDeckContainer.removeEventListener('click', handleCard);
+    // MOBILE
     cardDeckContainer.style.cursor = 'default';
     cardDeckContainer.innerHTML = createDeckMobileMarkup(cards);
   }
@@ -102,7 +118,7 @@ function triggerCardAnimation() {
   }
 }
 
-function openCardReplace(
+async function openCardReplace(
   { title, description, images },
   newCardTitle,
   newCardText,
@@ -111,6 +127,7 @@ function openCardReplace(
   newCardTitle.textContent = title;
   newCardText.textContent = description;
   newCardImg.setAttribute('href', getImage(images));
+  await (res => newCardImg.addEventListener('load', res, { once: true }));
 }
 
 function openCardText(title, text) {
