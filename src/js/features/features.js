@@ -3,9 +3,7 @@ import createDeckMarkup from './features-deck-markup';
 import createCardMarkup from './features-card-markup';
 import cards from './features-images-array';
 import selectImage from '../functions/select-image';
-import getImage from '../functions/getImage';
 import createDeckMobileMarkup from './features-deck-mobile-markup';
-// import selectImage from '../functions/select-image';
 
 export const sectionName = 'features';
 const cardDeckContainer = document.querySelector(
@@ -47,62 +45,66 @@ function renderCards() {
       cardDeckContainer.style.cursor = 'default';
 
       const lastDeckCard = cardDeckContainer.lastElementChild;
+      // const pictureImg = lastDeckCard.querySelector('.features__card-img');
 
-      // FIRST TRANSITION
       lastDeckCard.classList.add('transition-anim');
-
-      // SECOND TRANSITION
       setTimeout(() => {
         lastDeckCard.style.right = '-603px';
       }, 1000);
 
-      // THIRD TRANSITION
+      setTimeout(() => {
+        openCard.push(deckCards[deckCards.length - 1]);
+        deckCards.pop();
+        deckCards.unshift(openCard[0]);
+        openCard.shift();
 
-      lastDeckCard.addEventListener('transitionend', onTransitionEnd);
+        openCardContainer.innerHTML = `${createCardMarkup([openCard[0]])}`;
 
-      function onTransitionEnd(e) {
-        if (e.propertyName !== 'width') return;
-        handleTransitionEnd(lastDeckCard);
-        lastDeckCard.removeEventListener('transitionend', onTransitionEnd);
-      }
+        let cardImg = document.querySelector(
+          '[data-id="features__open-card-image"]'
+        );
+
+        // cardImg = pictureImg;
+        const cardTitle = document.querySelector(
+          '[data-id="features__card-title"]'
+        );
+        const cardText = document.querySelector(
+          '[data-id="features__card-text"]'
+        );
+
+        closeCardText(cardTitle, cardText);
+
+        cardTitle.textContent = openCard[0].title;
+        cardText.textContent = openCard[0].description;
+
+        cardImg.onload = function handleImageLoad() {
+          lastDeckCard.remove();
+
+          cardDeckImageReplace(deckCards[0]);
+
+          triggerCardAnimation();
+
+          openCardText(cardTitle, cardText);
+
+          cardDeckContainer.style.cursor = 'pointer';
+          isAnimating = false;
+        };
+
+        // lastDeckCard.remove();
+
+        // cardDeckImageReplace(deckCards[0]);
+
+        // triggerCardAnimation();
+
+        // openCardText(cardTitle, cardText);
+
+        // cardDeckContainer.style.cursor = 'pointer';
+        // isAnimating = false;
+      }, 2000);
     };
 
-    function handleTransitionEnd(lastDeckCard) {
-      openCard.push(deckCards[deckCards.length - 1]);
-      deckCards.pop();
-      deckCards.unshift(openCard[0]);
-      openCard.shift();
-
-      const newCardTitle = document.querySelector(
-        '[data-id="features__card-title"]'
-      );
-      const newCardText = document.querySelector(
-        '[data-id="features__card-text"]'
-      );
-      const newCardImg = document.querySelector(
-        '[data-id="features__open-card-image"]'
-      );
-
-      closeCardText(newCardTitle, newCardText);
-
-      openCardReplace(openCard[0], newCardTitle, newCardText, newCardImg);
-
-      cardDeckImageReplace(deckCards[0], lastDeckCard);
-
-      triggerCardAnimation();
-
-      setTimeout(() => {
-        openCardText(newCardTitle, newCardText);
-      }, 100);
-
-      cardDeckContainer.style.cursor = 'pointer';
-      isAnimating = false;
-    }
-
     cardDeckContainer.addEventListener('click', handleCardRef);
-    cardDeckContainer.style.cursor = 'pointer';
   } else {
-    // MOBILE
     cardDeckContainer.style.cursor = 'default';
     cardDeckContainer.innerHTML = createDeckMobileMarkup(cards);
   }
@@ -116,18 +118,6 @@ function triggerCardAnimation() {
     clipAnim.beginElement();
     borderAnim.beginElement();
   }
-}
-
-async function openCardReplace(
-  { title, description, images },
-  newCardTitle,
-  newCardText,
-  newCardImg
-) {
-  newCardTitle.textContent = title;
-  newCardText.textContent = description;
-  newCardImg.setAttribute('href', getImage(images));
-  await (res => newCardImg.addEventListener('load', res, { once: true }));
 }
 
 function openCardText(title, text) {
@@ -144,10 +134,7 @@ function closeCardText(title, text) {
   text.classList.remove('open');
 }
 
-function cardDeckImageReplace({ images, alt }, lastDeckCard) {
-  setTimeout(() => {
-    lastDeckCard.remove();
-  }, 50);
+function cardDeckImageReplace({ images, alt }) {
   cardDeckContainer.insertAdjacentHTML(
     'afterbegin',
     `<li class="features__deck-item">
