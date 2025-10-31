@@ -6,6 +6,10 @@ import selectImage from '../functions/select-image';
 import createDeckMobileMarkup from './features-deck-mobile-markup';
 
 export const sectionName = 'features';
+const firstAnimDuration = 1000;
+const secondAnimDuration = 1000;
+const thirdAnimDuration = 1000;
+
 const cardDeckContainer = document.querySelector(
   '[data-id="features__cards-deck"]'
 );
@@ -60,7 +64,7 @@ function renderCards() {
 
         openCardContainer.innerHTML = `${createCardMarkup([openCard[0]])}`;
 
-        let cardImg = document.querySelector(
+        const cardImg = document.querySelector(
           '[data-id="features__open-card-image"]'
         );
 

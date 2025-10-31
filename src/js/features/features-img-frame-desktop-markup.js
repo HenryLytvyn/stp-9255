@@ -31,7 +31,7 @@ const desktopFrame = `<svg
     </clipPath>
   </defs>
 
-  <!-- ИЗОБРАЖЕНИЕ -->
+  <!-- IMAGE -->
   <image
     class="features__open-card-image"
     data-id="features__open-card-image"
@@ -41,7 +41,7 @@ const desktopFrame = `<svg
     clip-path="url(#clip-\${id})"
   />
 
-  <!-- РАМКА (без clip-path), с собственным id -->
+  <!-- FRAME (without clip-path), with own id -->
   <polygon
     id="border-\${id}"
     data-id="border-poly"
