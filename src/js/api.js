@@ -7,6 +7,6 @@ export async function getReviews() {
   return data.data;
 }
 
-const data = await getReviews();
+const data = getReviews();
 
 console.log(data);
