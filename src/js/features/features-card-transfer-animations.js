@@ -1,10 +1,14 @@
+import selectImage from '../functions/select-image';
 import createCardMarkup from './features-card-markup';
+import {
+  cardDeckContainer,
+  openCardContainer,
+  sectionName,
+} from './features-constants';
 
-const firstAnimDuration = 1000;
-const secondAnimDuration = 1000;
-const thirdAnimDuration = 1000;
+let isAnimating = false;
 
-export function firstCardTransferAnim(isAnimating, cardDeckContainer) {
+export function firstCardTransferAnim() {
   if (isAnimating) return;
   isAnimating = true;
   cardDeckContainer.style.cursor = 'default';
@@ -12,19 +16,14 @@ export function firstCardTransferAnim(isAnimating, cardDeckContainer) {
   const lastDeckCard = cardDeckContainer.lastElementChild;
   lastDeckCard.classList.add('transition-anim');
 
-  // setTimeout(secondCardTransferAnim(), 1000);
+  return lastDeckCard;
 }
 
 export function secondCardTransferAnim(lastDeckCard) {
   lastDeckCard.style.right = '-603px';
 }
 
-export function thirdCardTransferAnim(
-  openCard,
-  deckCards,
-  lastDeckCard,
-  openCardContainer
-) {
+export function thirdCardTransferAnim(openCard, deckCards, lastDeckCard) {
   // Добавляю эту карточку в колоду открытых
   openCard.push(deckCards[deckCards.length - 1]);
 
@@ -50,18 +49,28 @@ export function thirdCardTransferAnim(
   cardTitle.textContent = openCard[0].title;
   cardText.textContent = openCard[0].description;
 
-  cardImg.onload = function handleImageLoad() {
+  cardImg.onload = handleImageLoad;
+
+  // in case if the image will loaded before listener
+  if (cardImg.complete) {
+    handleImageLoad();
+  }
+
+  function handleImageLoad() {
     lastDeckCard.remove();
 
     cardDeckImageReplace(deckCards[0]);
 
-    triggerCardAnimation();
+    requestAnimationFrame(() => {
+      triggerCardAnimation();
 
-    openCardText(cardTitle, cardText);
+      openCardText(cardTitle, cardText);
 
-    cardDeckContainer.style.cursor = 'pointer';
+      cardDeckContainer.style.cursor = 'pointer';
+    });
+
     isAnimating = false;
-  };
+  }
 }
 
 function closeCardText(title, text) {
@@ -87,7 +96,7 @@ function cardDeckImageReplace({ images, alt }) {
   );
 }
 
-function triggerCardAnimation() {
+export function triggerCardAnimation() {
   const clipAnim = document.querySelector('[data-anim="clip"]');
   const borderAnim = document.querySelector('[data-anim="border"]');
 

@@ -2,7 +2,7 @@ import mobileFrame from './features-img-frame-mobile-markup';
 import desktopFrame from './features-img-frame-desktop-markup';
 // import isMobile from '../functions/isMobile';
 import selectImage from '../functions/select-image';
-import { sectionName } from './features';
+import { sectionName } from './features-constants';
 
 export default function createDeckMobileMarkup(cardsArr) {
   return cardsArr
