@@ -4,7 +4,7 @@ import desktopFrame from './features-img-frame-desktop-markup';
 import selectImage from '../functions/select-image';
 import { sectionName } from './features-constants';
 
-export default function createDeckMarkup(cardsArr) {
+export default function createDeckDesktopMarkup(cardsArr) {
   return cardsArr
     .map(
       ({ images, alt }) => `

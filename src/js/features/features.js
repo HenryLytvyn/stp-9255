@@ -1,5 +1,5 @@
 import { getIsMobile, IsMobileChange } from '../functions/isMobile';
-import createDeckMarkup from './features-deck-markup';
+import createDeckDesktopMarkup from './features-deck-markup';
 import createCardMarkup from './features-card-markup';
 import cards from './features-images-array';
 import createDeckMobileMarkup from './features-deck-mobile-markup';
@@ -34,7 +34,7 @@ function renderCards() {
 
     triggerCardAnimation();
 
-    cardDeckContainer.innerHTML = createDeckMarkup(deckCards);
+    cardDeckContainer.innerHTML = createDeckDesktopMarkup(deckCards);
 
     handleCardRef = function handleCard() {
       const lastDeckCard = firstCardTransferAnim();

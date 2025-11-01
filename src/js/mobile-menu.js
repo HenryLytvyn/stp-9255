@@ -28,11 +28,14 @@ mobileBtn.addEventListener('click', () => {
     isScrollLocked = true;
   }
 
+  // console.log('isScrollLocked: ', isScrollLocked);
+
   scrollY = document.documentElement.scrollTop;
   heroImgCheck(Number(scrollY));
 });
 
 navLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+
 logo.addEventListener('click', closeMobileMenu);
 
 function closeMobileMenu() {
@@ -40,6 +43,7 @@ function closeMobileMenu() {
   mobileMenu.classList.remove('open');
   mobileMenuBG.classList.remove('open');
   unlockScroll();
+  isScrollLocked = false;
 }
 
 function heroImgCheck(scrollY) {
