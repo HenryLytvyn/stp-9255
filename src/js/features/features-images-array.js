@@ -35,7 +35,6 @@ import pvp_and_pve_desktop_2x from '/img/game-features/pvp-and-pve-desktop@2x.pn
 
 const cards = [
   {
-    // id: 'pvp-pve-modes',
     title: 'PvP & PvE Modes',
     description: 'Compete globally or conquer through immersive solo campaigns',
     images: {
@@ -48,7 +47,6 @@ const cards = [
   },
 
   {
-    // id: 'stunning-visuals',
     title: 'Stunning Visuals',
     description:
       'Breathtaking animations, hand-drawn portraits, and dynamic environments',
@@ -62,7 +60,6 @@ const cards = [
   },
 
   {
-    // id: 'dynasty-management',
     title: 'Dynasty Management',
     description:
       'Manage resources, diplomacy, armies, and political stability.',
@@ -76,7 +73,6 @@ const cards = [
   },
 
   {
-    // id: 'hero-system',
     title: 'Hero System',
     description: 'Explore kingdoms, mountains, deserts, and lost temples',
     images: {
@@ -89,7 +85,6 @@ const cards = [
   },
 
   {
-    // id: 'interactive-storytelling',
     title: 'Interactive Storytelling',
     description:
       'Choices affect relationships, war outcomes, and future events',
@@ -103,7 +98,6 @@ const cards = [
   },
 
   {
-    // id: 'campaign-map',
     title: 'Massive Campaign Map',
     description: 'Explore kingdoms, mountains, deserts, and lost temples',
     images: {
@@ -116,7 +110,6 @@ const cards = [
   },
 
   {
-    // id: 'strategic-combat',
     title: 'Deep Strategic Combat',
     description:
       'Tactical battles that challenge your mind and military precision',

@@ -15,9 +15,6 @@ const swiperContainer = document.querySelector('[data-id="heroes__swiper"]');
 const paginationContainer = document.querySelector(
   '[data-id="heroes__sw-pagin-container"]'
 );
-// const paginationItem = document.querySelector(
-//   '[data-id="heroes__sw-pagin-item"]'
-// );
 
 container.insertAdjacentHTML('beforeend', cardsMarkup(heroesCards));
 initSwiper();
@@ -34,8 +31,6 @@ function initSwiper() {
     },
     pagination: {
       el: paginationContainer,
-      // bulletClass: paginationItem,
-      // bulletActiveClass: 'heroes__sw-pagin-active-item',
     },
     keyboard: {
       enabled: true,

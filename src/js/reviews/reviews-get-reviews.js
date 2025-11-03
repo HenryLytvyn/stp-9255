@@ -1,9 +1,5 @@
 import reviewsArr from './reviews-array';
 
-// let actualReviews = checkStorage();
-
-// document.addEventListener('DOMContentLoaded', checkStorage);
-
 export default function getReviews() {
   let reviewsSt;
   try {
@@ -11,7 +7,6 @@ export default function getReviews() {
   } catch {
     reviewsSt = null;
   }
-  // JSON.parse(localStorage.getItem('reviews')) ?? [];
   if (Array.isArray(reviewsSt) && reviewsSt.length) {
     return reviewsSt;
   } else {

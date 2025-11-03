@@ -1,12 +1,8 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/scrollbar';
-
 import cardsMarkup from './reviews-card-markup';
 import { displayBreakpoint } from '../constants';
 import getReviews from './reviews-get-reviews';
-// import './reviews-storage';
 
 export const itemsList = document.querySelector(
   '[data-id="reviews__cards-list"]'
@@ -14,7 +10,6 @@ export const itemsList = document.querySelector(
 const prevBtn = document.querySelector('[data-id="reviews__prev-btn"]');
 const nextBtn = document.querySelector('[data-id="reviews__next-btn"]');
 const container = document.querySelector('[data-id="reviews__swiper"]');
-// const scrollbarEl = document.querySelector('[data-id="reviews__sw-scrollbar"]');
 
 itemsList.insertAdjacentHTML('beforeend', cardsMarkup(getReviews()));
 initSwiper();
@@ -30,10 +25,6 @@ function initSwiper() {
       nextEl: nextBtn,
     },
 
-    // scrollbar: {
-    //   el: scrollbarEl,
-    //   draggable: true,
-    // },
     keyboard: {
       enabled: true,
     },
@@ -45,17 +36,5 @@ function initSwiper() {
       },
     },
     watchOverflow: true,
-    // on: {
-    //   reachBeginning() {
-    //     prevBtn.disabled = true;
-    //   },
-    //   fromEdge() {
-    //     prevBtn.disabled = false;
-    //     nextBtn.disabled = false;
-    //   },
-    //   reachEnd() {
-    //     nextBtn.disabled = true;
-    //   },
-    // },
   });
 }

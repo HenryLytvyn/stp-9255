@@ -5,12 +5,12 @@ const observer = new IntersectionObserver(
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('animate');
-        observer.unobserve(entry.target); // Чтобы сработало один раз
+        observer.unobserve(entry.target); // To make it work once
       }
     });
   },
   {
-    threshold: 0.5, // Запуск, когда 50% элемента видно
+    threshold: 0.5, // Launch when 50% of the element is visible
   }
 );
 

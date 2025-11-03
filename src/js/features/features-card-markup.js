@@ -1,12 +1,9 @@
-// import mobileFrame from './features-img-frame-mobile-markup';
 import desktopFrame from './features-img-frame-desktop-markup';
-// import isMobile from '../functions/isMobile';
 import getImage from '../functions/getImage';
 
 export default function createCardMarkup(cardsArr) {
   return cardsArr
     .map(({ title, images, id, description }) => {
-      // const frameTpl = isMobile ? mobileFrame : desktopFrame;
       const frame = desktopFrame
         .replaceAll('${cardSrc}', getImage(images))
         .replaceAll('${id}', id);

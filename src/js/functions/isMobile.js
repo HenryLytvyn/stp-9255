@@ -1,10 +1,5 @@
 import { displayBreakpoint } from '../constants';
 
-// export default function isMobile() {
-//   if (window.innerWidth < displayBreakpoint) return true;
-//   else return false;
-// }
-
 let isMobile = window.innerWidth < displayBreakpoint;
 const isMobileSubscribers = [];
 
@@ -17,7 +12,7 @@ function updateIsMobile() {
   }
 }
 
-// слушатель будет обновлять переменную при изменении окна
+// the listener will update the variable when the window changes
 window.addEventListener('resize', updateIsMobile);
 
 export function IsMobileChange(callback) {
@@ -27,4 +22,3 @@ export function IsMobileChange(callback) {
 export function getIsMobile() {
   return isMobile;
 }
-// export default isMobile;

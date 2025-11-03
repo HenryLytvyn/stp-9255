@@ -24,16 +24,16 @@ export function secondCardTransferAnim(lastDeckCard) {
 }
 
 export function thirdCardTransferAnim(openCard, deckCards, lastDeckCard) {
-  // Добавляю эту карточку в колоду открытых
+  // Adding this card to the deck of open cards.
   openCard.push(deckCards[deckCards.length - 1]);
 
-  // Удаляю последнюю карточку в массиве колоды
+  // Remove the last card in the deck array
   deckCards.pop();
 
-  // Добавляю карточку в начале колоды
+  // Adding a card to the beginning of the deck
   deckCards.unshift(openCard[0]);
 
-  // Убираю первую карточку в массиве открытых карточек
+  // Deleting the first card in an array of open cards
   openCard.shift();
 
   openCardContainer.innerHTML = `${createCardMarkup([openCard[0]])}`;

@@ -22,11 +22,11 @@
   const freeze = () => window.scrollTo(sx, sy);
 
   function addAll() {
-    // фиксируем текущее положение
+    // fixing the current position
     sx = scrollEl.scrollLeft;
     sy = scrollEl.scrollTop;
 
-    // блокируем любые попытки прокрутки
+    // blocking any scrolling attempts
     window.addEventListener('scroll', freeze, { passive: false });
     window.addEventListener('wheel', prevent, { passive: false });
     document.addEventListener('wheel', prevent, {
@@ -50,7 +50,7 @@
     window.removeEventListener('keydown', preventKeys);
   }
 
-  // Глобальные хелперы
+  // Global helpers
   window.lockScroll = addAll;
   window.unlockScroll = removeAll;
 })();

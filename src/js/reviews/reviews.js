@@ -59,8 +59,6 @@ function handleForm(event) {
 }
 
 function getFormData() {
-  // event.preventDefault();
-
   const formData = new FormData(form);
   console.log(Object.fromEntries(formData.entries()));
   return Object.fromEntries(formData.entries());
