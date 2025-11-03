@@ -1,4 +1,31 @@
-/* empty css                      */import{S as L,a as N,A as H}from"./assets/vendor-D22bJHWh.js";(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))n(s);new MutationObserver(s=>{for(const a of s)if(a.type==="childList")for(const i of a.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&n(i)}).observe(document,{childList:!0,subtree:!0});function o(s){const a={};return s.integrity&&(a.integrity=s.integrity),s.referrerPolicy&&(a.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?a.credentials="include":s.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function n(s){if(s.ep)return;s.ep=!0;const a=o(s);fetch(s.href,a)}})();(()=>{const e=document.scrollingElement||document.documentElement;let t=0,o=0;const n=d=>d.preventDefault(),s=d=>{["ArrowUp","ArrowDown","ArrowLeft","ArrowRight","PageUp","PageDown","Home","End"," ","Spacebar"].includes(d.key)&&d.preventDefault()},a=()=>window.scrollTo(t,o);function i(){t=e.scrollLeft,o=e.scrollTop,window.addEventListener("scroll",a,{passive:!1}),window.addEventListener("wheel",n,{passive:!1}),document.addEventListener("wheel",n,{passive:!1,capture:!0}),window.addEventListener("touchmove",n,{passive:!1}),document.addEventListener("touchmove",n,{passive:!1,capture:!0}),window.addEventListener("keydown",s,{passive:!1})}function F(){window.removeEventListener("scroll",a),window.removeEventListener("wheel",n),document.removeEventListener("wheel",n,{capture:!0}),window.removeEventListener("touchmove",n),document.removeEventListener("touchmove",n,{capture:!0}),window.removeEventListener("keydown",s)}window.lockScroll=i,window.unlockScroll=F})();const p=document.querySelector('[data-id="mobile-menu"]'),O=document.querySelector('[data-id="mobile-btn"]'),S=document.querySelector('[data-id="nav-icon"]'),R=document.querySelectorAll('[data-id="nav__item-link"]');document.querySelector("body");const E=document.querySelector('[data-id="mobile-menu__background"]'),G=document.querySelector('[data-id="header__logo"]');let h,g=!1;O.addEventListener("click",()=>{p.style.backgroundPosition="center top",S.classList.toggle("open"),p.classList.toggle("open"),E.classList.toggle("open"),g?(unlockScroll(),g=!1):(lockScroll(),g=!0),h=document.documentElement.scrollTop,K(Number(h))});R.forEach(e=>e.addEventListener("click",A));G.addEventListener("click",A);function A(){S.classList.remove("open"),p.classList.remove("open"),E.classList.remove("open"),unlockScroll()}function K(e){p.style.backgroundPosition=`center -${e}px`}const V=document.querySelectorAll('[data-id="title-frame-path"]'),$=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&(t.target.classList.add("animate"),$.unobserve(t.target))})},{threshold:.5});V.forEach(e=>{const t=e.getTotalLength();e.style.strokeDasharray=t,e.style.strokeDashoffset=t,$.observe(e)});const c=1200;let _=window.innerWidth<c;const f=[];function W(){const e=window.innerWidth<c;e!==_&&(_=e,f.forEach(t=>t()),console.log(f))}window.addEventListener("resize",W);function Y(e){f.push(e)}function q(){return _}const z=`<svg
+/* empty css                      */import{S as L,a as N,A as H}from"./assets/vendor-D22bJHWh.js";(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))n(s);new MutationObserver(s=>{for(const a of s)if(a.type==="childList")for(const i of a.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&n(i)}).observe(document,{childList:!0,subtree:!0});function o(s){const a={};return s.integrity&&(a.integrity=s.integrity),s.referrerPolicy&&(a.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?a.credentials="include":s.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function n(s){if(s.ep)return;s.ep=!0;const a=o(s);fetch(s.href,a)}})();(()=>{const e=document.scrollingElement||document.documentElement;let t=0,o=0;const n=d=>d.preventDefault(),s=d=>{["ArrowUp","ArrowDown","ArrowLeft","ArrowRight","PageUp","PageDown","Home","End"," ","Spacebar"].includes(d.key)&&d.preventDefault()},a=()=>window.scrollTo(t,o);function i(){t=e.scrollLeft,o=e.scrollTop,window.addEventListener("scroll",a,{passive:!1}),window.addEventListener("wheel",n,{passive:!1}),document.addEventListener("wheel",n,{passive:!1,capture:!0}),window.addEventListener("touchmove",n,{passive:!1}),document.addEventListener("touchmove",n,{passive:!1,capture:!0}),window.addEventListener("keydown",s,{passive:!1})}function F(){window.removeEventListener("scroll",a),window.removeEventListener("wheel",n),document.removeEventListener("wheel",n,{capture:!0}),window.removeEventListener("touchmove",n),document.removeEventListener("touchmove",n,{capture:!0}),window.removeEventListener("keydown",s)}window.lockScroll=i,window.unlockScroll=F})();const p=document.querySelector('[data-id="mobile-menu"]'),O=document.querySelector('[data-id="mobile-btn"]'),S=document.querySelector('[data-id="nav-icon"]'),R=document.querySelectorAll('[data-id="nav__item-link"]');document.querySelector("body");const E=document.querySelector('[data-id="mobile-menu__background"]'),G=document.querySelector('[data-id="header__logo"]');let h,g=!1;O.addEventListener("click",()=>{p.style.backgroundPosition="center top",S.classList.toggle("open"),p.classList.toggle("open"),E.classList.toggle("open"),g?(unlockScroll(),g=!1):(lockScroll(),g=!0),h=document.documentElement.scrollTop,K(Number(h))});R.forEach(e=>e.addEventListener("click",A));G.addEventListener("click",A);function A(){S.classList.remove("open"),p.classList.remove("open"),E.classList.remove("open"),unlockScroll()}function K(e){p.style.backgroundPosition=`center -${e}px`}const V=document.querySelectorAll('[data-id="title-frame-path"]'),$=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&(t.target.classList.add("animate"),$.unobserve(t.target))})},{threshold:.5});V.forEach(e=>{const t=e.getTotalLength();e.style.strokeDasharray=t,e.style.strokeDashoffset=t,$.observe(e)});const c=1200;let _=window.innerWidth<c;const f=[];function W(){const e=window.innerWidth<c;e!==_&&(_=e,f.forEach(t=>t()),console.log(f))}window.addEventListener("resize",W);function Y(e){f.push(e)}function q(){return _}function m(e,t,o){const{mobile1x:n,mobile2x:s,desktop1x:a,desktop2x:i}=e;return`
+        <picture class="${o}__card-picture">
+        <source
+          media="(min-width: ${c}px)"
+          srcset="
+            ${a}    1x,
+            ${i}    2x
+          "
+        />
+        <source
+          media="(max-width: ${c-.02}px)"
+          srcset="
+            ${n}    1x,
+            ${s}    2x
+          "
+        />
+        <img
+          class="${o}__card-img"
+          src="${n}"
+          alt="${t}"
+          loading="lazy"
+          onload="this.dataset.loaded='true'"
+        />
+      </picture>
+        `}const k="features",r=document.querySelector('[data-id="features__cards-deck"]'),M=document.querySelector('[data-id="features__open-cards"]');function z(e){return e.map(({images:t,alt:o})=>`
+        <li class="features__deck-item">
+            ${m(t,o,k)}
+        </li>`).join("")}const J=`<svg
   class="card-frame-animation"
   data-id="card-frame-animation"
   width="554"
@@ -70,36 +97,9 @@
       "
     />
   </polygon>
-</svg>`;function m(e,t,o){const{mobile1x:n,mobile2x:s,desktop1x:a,desktop2x:i}=e;return`
-        <picture class="${o}__card-picture">
-        <source
-          media="(min-width: ${c}px)"
-          srcset="
-            ${a}    1x,
-            ${i}    2x
-          "
-        />
-        <source
-          media="(max-width: ${c-.02}px)"
-          srcset="
-            ${n}    1x,
-            ${s}    2x
-          "
-        />
-        <img
-          class="${o}__card-img"
-          src="${n}"
-          alt="${t}"
-          loading="lazy"
-          onload="this.dataset.loaded='true'"
-        />
-      </picture>
-        `}const k="features",r=document.querySelector('[data-id="features__cards-deck"]'),M=document.querySelector('[data-id="features__open-cards"]');function J(e){return e.map(({images:t,alt:o})=>`
-        <li class="features__deck-item">
-            ${m(t,o,k)}
-        </li>`).join("")}function U({mobile1x:e,mobile2x:t,desktop1x:o,desktop2x:n}){const s=window.devicePixelRatio||1;return q()?s>1?t:e:s>1?n:o}function B(e){return e.map(({title:t,images:o,id:n,description:s})=>`<div class="features__card">
+</svg>`;function U({mobile1x:e,mobile2x:t,desktop1x:o,desktop2x:n}){const s=window.devicePixelRatio||1;return q()?s>1?t:e:s>1?n:o}function B(e){return e.map(({title:t,images:o,id:n,description:s})=>`<div class="features__card">
 
-        ${z.replaceAll("${cardSrc}",U(o)).replaceAll("${id}",n)}
+        ${J.replaceAll("${cardSrc}",U(o)).replaceAll("${id}",n)}
         <div class="features__card-text-wrapper">
           <h3 class="features__card-title" data-id="features__card-title">${t}</h3>
           <p class="features__card-text" data-id="features__card-text">
@@ -116,7 +116,7 @@
         </div>
       </li>`).join("")}let v=!1;function Ee(){if(v)return;v=!0,r.style.cursor="default";const e=r.lastElementChild;return e.classList.add("transition-anim"),e}function Ae(e){e.style.right="-603px"}function $e(e,t,o){e.push(t[t.length-1]),t.pop(),t.unshift(e[0]),e.shift(),M.innerHTML=`${B([e[0]])}`;const n=document.querySelector('[data-id="features__open-card-image"]'),s=document.querySelector('[data-id="features__card-title"]'),a=document.querySelector('[data-id="features__card-text"]');qe(s,a),s.textContent=e[0].title,a.textContent=e[0].description,n.onload=i,n.complete&&i();function i(){o.remove(),Be(t[0]),requestAnimationFrame(()=>{C(),Me(s,a),r.style.cursor="pointer"}),v=!1}}function qe(e,t){e.classList.add("close"),t.classList.add("close"),e.classList.remove("open"),t.classList.remove("open")}function Me(e,t){e.classList.add("open"),t.classList.add("open"),e.classList.remove("close"),t.classList.remove("close")}function Be({images:e,alt:t}){r.insertAdjacentHTML("afterbegin",`<li class="features__deck-item">
       ${m(e,t,k)}
-    </li>`)}function C(){const e=document.querySelector('[data-anim="clip"]'),t=document.querySelector('[data-anim="border"]');e&&t&&(e.beginElement(),t.beginElement())}let l=null;T();Y(()=>T());function T(){if(l&&(r.removeEventListener("click",l),l=null),q())r.style.cursor="default",r.innerHTML=Se(y);else{let e=[...y];const t=[];t.push(e[e.length-1]),e.pop(),M.innerHTML=`${B(t)}`,C(),r.innerHTML=J(e),l=function(){const n=Ee();setTimeout(()=>{Ae(n)},1e3),setTimeout(()=>{$e(t,e,n)},2e3)},r.addEventListener("click",l)}}function Ce(e){return e.map(({title:t,description:o,images:n,alt:s})=>`<li class="heroes__card swiper-slide">
+    </li>`)}function C(){const e=document.querySelector('[data-anim="clip"]'),t=document.querySelector('[data-anim="border"]');e&&t&&(e.beginElement(),t.beginElement())}let l=null;T();Y(()=>T());function T(){if(l&&(r.removeEventListener("click",l),l=null),q())r.style.cursor="default",r.innerHTML=Se(y);else{let e=[...y];const t=[];t.push(e[e.length-1]),e.pop(),M.innerHTML=`${B(t)}`,C(),r.innerHTML=z(e),l=function(){const n=Ee();setTimeout(()=>{Ae(n)},1e3),setTimeout(()=>{$e(t,e,n)},2e3)},r.addEventListener("click",l)}}function Ce(e){return e.map(({title:t,description:o,images:n,alt:s})=>`<li class="heroes__card swiper-slide">
       <h3 class="heroes__card-title">${t}</h3>
       <p class="heroes__card-text">${o}</p>
       ${m(n,s,et)}
