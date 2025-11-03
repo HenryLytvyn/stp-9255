@@ -7,5 +7,3 @@ import './js/features/features';
 import './js/heroes/heroes';
 import './js/reviews/reviews';
 import './js/faq';
-
-import './js/document-bg-cast';

@@ -1,20 +1,7 @@
 .ht-play {
   background-position: top center;
   background-repeat: no-repeat;
-  background-image: image-set(
-    url(../img/ht-play_reviews-bg-mobile.png) 1x,
-    url(../img/ht-play_reviews-bg-mobile@2x.png) 2x
-  );
   /* background-size: contain; */
-}
-
-.how-to-play-cast {
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-image: image-set(
-    url(../img/ht-play_reviews-bg-mobile.png) 1x,
-    url(../img/ht-play_reviews-bg-mobile@2x.png) 2x
-  );
 }
 
 .ht-play__list {
@@ -89,12 +76,12 @@
 }
 
 @media screen and (max-width: 1199px) {
-  /* .ht-play {
+  .ht-play {
     background-image: image-set(
       url(../img/ht-play_reviews-bg-mobile.png) 1x,
       url(../img/ht-play_reviews-bg-mobile@2x.png) 2x
     );
-  } */
+  }
 
   .ht-play__icon-1::after {
     background-image: image-set(
