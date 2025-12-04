@@ -6,7 +6,7 @@ import {
   sectionName,
 } from './features-constants';
 
-let isAnimating = false;
+export let isAnimating = false;
 
 export function firstCardTransferAnim() {
   if (isAnimating) return;

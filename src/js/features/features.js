@@ -5,6 +5,7 @@ import cards from './features-images-array';
 import createDeckMobileMarkup from './features-deck-mobile-markup';
 import {
   firstCardTransferAnim,
+  isAnimating,
   secondCardTransferAnim,
   thirdCardTransferAnim,
   triggerCardAnimation,
@@ -37,6 +38,7 @@ function renderCards() {
     cardDeckContainer.innerHTML = createDeckMarkup(deckCards);
 
     handleCardRef = function handleCard() {
+      if (isAnimating) return;
       const lastDeckCard = firstCardTransferAnim();
 
       setTimeout(() => {
