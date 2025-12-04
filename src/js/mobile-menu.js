@@ -40,6 +40,7 @@ function closeMobileMenu() {
   mobileMenu.classList.remove('open');
   mobileMenuBG.classList.remove('open');
   unlockScroll();
+  isScrollLocked = false;
 }
 
 function heroImgCheck(scrollY) {
