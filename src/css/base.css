@@ -1,14 +1,13 @@
 :root {
   --main-color: #feffe8;
-  /* --bg-color: #043558; */
   --button-bg-color: #15b4b9;
-  --hover: #92fef8;
+  --color-hover-primary: #92fef8;
+  --color-hover-secondary: #66b3ff;
+  --color-hover-tertiary: #119da0;
+  --color-disabled: #5c6670;
 
   --main-font: 'Poppins', sans-serif;
   --secondary-font: 'Delius Unicase', sans-serif;
-
-  /* --marker-size: 7px;
-  --marker-gap: 7px; */
 }
 
 html {

@@ -10,6 +10,13 @@
 
   color: inherit;
   background-color: var(--button-bg-color);
+
+  transition: background-color 250ms ease;
+}
+
+.gpl-btn:hover,
+.gpl-btn:focus {
+  background-color: var(--color-hover-tertiary);
 }
 
 .gpl-btn__icon-wrapper {
