@@ -8,5 +8,3 @@ export async function getReviews() {
 }
 
 const data = getReviews();
-
-// console.log(data);

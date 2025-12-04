@@ -5,14 +5,28 @@
   top: 0;
   left: 0;
   width: 100%;
-}
-
-.header .container {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.header__container {
+  padding-top: 12px;
+  padding-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  transition: background-color 800ms ease, backdrop-filter 800ms ease;
+
+  /* for better optimization */
+  will-change: backdrop-filter, background-color;
+  background-color: transparent;
+  backdrop-filter: none;
+}
+
+.header__scrolled {
+  background-color: rgba(175, 175, 175, 0.2);
+  backdrop-filter: blur(16px);
 }
 
 .logo {
@@ -34,10 +48,6 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .header {
-    padding: 12px 0;
-  }
-
   .logo {
     width: 52px;
   }
