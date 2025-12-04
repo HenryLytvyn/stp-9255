@@ -26,6 +26,7 @@ function renderCards() {
 
   // DESKTOP
   if (!getIsMobile()) {
+    cardDeckContainer.style.cursor = 'pointer';
     let deckCards = [...cards];
     const openCard = [];
     openCard.push(deckCards[deckCards.length - 1]);
