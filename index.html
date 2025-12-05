@@ -10,7 +10,7 @@
     <script type="module" crossorigin src="/stp-9255/index.js"></script>
     <link rel="modulepreload" crossorigin href="/stp-9255/assets/vendor-D22bJHWh.js">
     <link rel="stylesheet" crossorigin href="/stp-9255/assets/vendor-akNt-8zx.css">
-    <link rel="stylesheet" crossorigin href="/stp-9255/assets/styles-Dplkpj1D.css">
+    <link rel="stylesheet" crossorigin href="/stp-9255/assets/styles-CHP3Kr_Q.css">
   </head>
   <body>
     <header class="header">
@@ -29,7 +29,11 @@
       </picture>
     </a>
 
-    <button class="header__mobile-btn" data-id="mobile-btn">
+    <button
+      class="header__mobile-btn"
+      data-id="mobile-btn"
+      aria-label="mobile menu button"
+    >
       <span class="nav-icon" data-id="nav-icon">
         <span></span>
         <span></span>
@@ -85,7 +89,7 @@
 
 
     <main>
-      <section class="hero" id="hero">
+      <section class="hero" id="hero" data-id="hero">
   <div class="container">
     <h1 class="hero__title">
       Fairy Legends: Tail&nbsp;Quest - Unravel the Magic, Rewrite the Tale!
@@ -144,7 +148,7 @@
   />
 </svg>
  -->
-      <section class="about" id="about">
+      <section class="about" id="about" data-id="about">
   <div class="container">
     <h2 class="about__title">About the Game</h2>
     <!-- <svg width="288" height="87" class="title-frame">
@@ -241,7 +245,7 @@
   </div>
 </section>
 
-      <section class="ht-play" id="how-to-play">
+      <section class="ht-play" id="how-to-play" data-id="how-to-play">
   <div class="container">
     <h2 class="ht-play__title">How to play</h2>
     <!-- <svg width="288" height="87" class="title-frame">
@@ -338,7 +342,7 @@
   </div>
 </section>
 
-      <section class="features" id="features">
+      <section class="features" id="features" data-id="features">
   <div class="container">
     <h2 class="features__title">Game Features</h2>
     <svg
@@ -386,7 +390,7 @@
   </div>
 </section>
 
-      <section class="heroes" id="heroes">
+      <section class="heroes" id="heroes" data-id="heroes">
   <div class="container heroes__container">
     <h2 class="heroes__title">Main Characters</h2>
     <svg
@@ -447,7 +451,7 @@
   </div>
 </section>
 
-      <section class="atmosphere" id="atmosphere">
+      <section class="atmosphere" id="atmosphere" data-id="atmosphere">
   <div class="container">
     <h2 class="atmosphere__title">Game atmosphere</h2>
     <!-- <svg width="288" height="87" class="title-frame">
@@ -524,7 +528,7 @@
   </div>
 </section>
 
-      <section class="reviews" id="reviews">
+      <section class="reviews" id="reviews" data-id="reviews">
   <div class="container reviews__container">
     <!-- Star mask -->
     <svg
@@ -618,7 +622,7 @@
   </div>
 </section>
 
-      <section class="faq">
+      <section class="faq" data-id="faq">
   <div class="container">
     <h2 class="faq__title">FAQ</h2>
     <svg
@@ -761,7 +765,7 @@
   </div>
 </section>
 
-      <section class="join">
+      <section class="join" data-id="join">
   <div class="container">
     <h2 class="join__title">Begin Your Legend Now!</h2>
     <div class="join__framed framed">
@@ -809,7 +813,7 @@
 
     </main>
 
-    <footer class="footer" id="footer">
+    <footer class="footer" id="footer" data-id="footer">
   <div class="container">
     <div class="footer__terms-wrapper">
       <a class="footer__terms-link" href="./privacy-policy.html"
@@ -877,7 +881,21 @@
 
   </div>
 </div>
-<div class="mobile-menu__background" data-id="mobile-menu__background"></div>
+
+<!-- <div class="mobile-menu__background" data-id="mobile-menu__background"></div> -->
+
+<div id="false-bg">
+  <div data-id="false-bg__hero"></div>
+  <div data-id="false-bg__about"></div>
+  <div data-id="false-bg__how-to-play"></div>
+  <div data-id="false-bg__features"></div>
+  <div data-id="false-bg__heroes"></div>
+  <div data-id="false-bg__atmosphere"></div>
+  <div data-id="false-bg__reviews"></div>
+  <div data-id="false-bg__faq"></div>
+  <div data-id="false-bg__join"></div>
+  <div data-id="false-bg__footer"></div>
+</div>
 
     <section class="review-form is-ope" data-id="review-form">
   <div class="container">
