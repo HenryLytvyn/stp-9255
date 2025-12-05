@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  /* overflow: scroll; */
   position: relative;
   font-family: var(--main-font);
   font-size: 16px;

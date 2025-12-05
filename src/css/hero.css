@@ -6,7 +6,6 @@
   );
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover;
   /* overflow: visible; */
 }
 
@@ -22,7 +21,7 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.98px) {
   .hero {
     min-height: 610px;
   }
@@ -39,6 +38,7 @@
 @media screen and (min-width: 1200px) {
   .hero {
     height: 794px;
+    background-size: cover;
   }
 
   .hero .container {
