@@ -8,7 +8,6 @@ function updateIsMobile() {
   if (newValue !== isMobile) {
     isMobile = newValue;
     isMobileSubscribers.forEach(callback => callback());
-    console.log(isMobileSubscribers);
   }
 }
 

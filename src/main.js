@@ -2,7 +2,7 @@ import 'modern-normalize';
 import './js/scroll-locker';
 
 import './js/header/header';
-import './js/mobile-menu';
+import './js/mobile-menu/mobile-menu';
 import './js/section-title-animation';
 import './js/features/features';
 import './js/heroes/heroes';

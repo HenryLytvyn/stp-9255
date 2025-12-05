@@ -22,6 +22,8 @@
   will-change: backdrop-filter, background-color;
   background-color: transparent;
   backdrop-filter: none;
+
+  /* position: relative; */
 }
 
 .header__scrolled {
@@ -39,6 +41,8 @@
   padding: 6.5px 4px;
   border: none;
   background-color: transparent;
+  /* position: absolute;
+  z-index: 11; */
 }
 
 @media screen and (max-width: 1199px) {
