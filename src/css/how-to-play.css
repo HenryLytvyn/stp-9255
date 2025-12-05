@@ -1,7 +1,6 @@
 .ht-play {
   background-position: top center;
   background-repeat: no-repeat;
-  /* background-size: contain; */
 }
 
 .ht-play__list {
@@ -19,7 +18,6 @@
 
   width: 100%;
   padding: 16px 8px;
-  /* border: 1px solid var(--main-color); */
   border-radius: 8px;
   background: rgba(0, 32, 57, 0.8);
 
@@ -75,7 +73,7 @@
   grid-column: 1 / span 2;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.98px) {
   .ht-play {
     background-image: image-set(
       url(../img/ht-play_reviews-bg-mobile.png) 1x,
@@ -132,6 +130,7 @@
       url(../img/ht-play_reviews-bg-desktop.png) 1x,
       url(../img/ht-play_reviews-bg-desktop@2x.png) 2x
     );
+    background-size: cover;
   }
 
   .ht-play__list {

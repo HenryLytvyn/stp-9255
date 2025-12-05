@@ -32,9 +32,8 @@ const falseBGFooter = document.querySelector('[data-id="false-bg__footer"]');
 function setHeight(originalSection, falseSection) {
   if (!originalSection || !falseSection) return;
   const section = getComputedStyle(originalSection);
-  console.log(`${section}: `, section.height);
-  return (falseSection.style.height =
-    originalSection.getBoundingClientRect().height + 'px');
+  // console.log(`${section}: `, section.height);
+  return (falseSection.style.height = section.height);
 }
 
 setAllHight();
