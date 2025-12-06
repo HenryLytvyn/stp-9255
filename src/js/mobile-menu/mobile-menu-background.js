@@ -11,32 +11,38 @@ const faq = document.querySelector('[data-id="faq"]');
 const join = document.querySelector('[data-id="join"]');
 const footer = document.querySelector('[data-id="footer"]');
 
-const falseBG = document.querySelector('[data-id="false-bg"]');
-const falseBGHero = document.querySelector('[data-id="false-bg__hero"]');
-const falseBGAbout = document.querySelector('[data-id="false-bg__about"]');
+const falseBG = document.querySelector('[data-id="bg-mobile-menu"]');
+const falseBGHero = document.querySelector('[data-id="bg-mobile-menu__hero"]');
+const falseBGAbout = document.querySelector(
+  '[data-id="bg-mobile-menu__about"]'
+);
 const falseBGHowToPlay = document.querySelector(
-  '[data-id="false-bg__how-to-play"]'
+  '[data-id="bg-mobile-menu__how-to-play"]'
 );
 const falseBGFeatures = document.querySelector(
-  '[data-id="false-bg__features"]'
+  '[data-id="bg-mobile-menu__features"]'
 );
-const falseBGHeroes = document.querySelector('[data-id="false-bg__heroes"]');
+const falseBGHeroes = document.querySelector(
+  '[data-id="bg-mobile-menu__heroes"]'
+);
 const falseBGAtmosphere = document.querySelector(
-  '[data-id="false-bg__atmosphere"]'
+  '[data-id="bg-mobile-menu__atmosphere"]'
 );
-const falseBGReviews = document.querySelector('[data-id="false-bg__reviews"]');
-const falseBGFAQ = document.querySelector('[data-id="false-bg__faq"]');
-const falseBGJoin = document.querySelector('[data-id="false-bg__join"]');
-const falseBGFooter = document.querySelector('[data-id="false-bg__footer"]');
+const falseBGReviews = document.querySelector(
+  '[data-id="bg-mobile-menu__reviews"]'
+);
+const falseBGFAQ = document.querySelector('[data-id="bg-mobile-menu__faq"]');
+const falseBGJoin = document.querySelector('[data-id="bg-mobile-menu__join"]');
+const falseBGFooter = document.querySelector(
+  '[data-id="bg-mobile-menu__footer"]'
+);
 
 function setHeight(originalSection, falseSection) {
   if (!originalSection || !falseSection) return;
   const section = getComputedStyle(originalSection);
-  console.log(`${section}: `, section.height);
+  // console.log(`${section}: `, section.height);
   return (falseSection.style.height = section.height);
 }
-
-// setAllHight();
 
 export default function setAllHight() {
   setHeight(hero, falseBGHero);

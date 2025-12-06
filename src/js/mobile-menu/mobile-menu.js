@@ -6,8 +6,9 @@ const mobileBtn = document.querySelector('[data-id="mobile-btn"]');
 const navIcon = document.querySelector('[data-id="nav-icon"]');
 const navLinks = document.querySelectorAll('[data-id="nav__item-link"]');
 // const body = document.querySelector('body');
-const mobileMenuBG = document.querySelector(
-  '[data-id="mobile-menu__background"]'
+const mobileMenuBG = document.querySelector('[data-id="bg-mobile-menu"]');
+const mobileMenuBGOverlay = document.querySelector(
+  '[data-id="bg-mobile-menu__overlay"]'
 );
 const logo = document.querySelector('[data-id="header__logo"]');
 
@@ -24,6 +25,7 @@ mobileBtn.addEventListener('click', () => {
   navIcon.classList.toggle('open');
   mobileMenu.classList.toggle('open');
   mobileMenuBG.classList.toggle('open');
+  mobileMenuBGOverlay.classList.toggle('open');
 
   // if (isScrollLocked) {
   //   unlockScroll();
@@ -34,8 +36,6 @@ mobileBtn.addEventListener('click', () => {
   // }
 
   scrollY = document.documentElement.scrollTop;
-  console.log(scrollY);
-  console.log(isMobileMenuOpen);
   if (isMobileMenuOpen) {
     setAllHight();
   }
@@ -46,6 +46,7 @@ navLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
 logo.addEventListener('click', closeMobileMenu);
 
 function closeMobileMenu() {
+  mobileMenuBGOverlay.classList.add('close');
   navIcon.classList.remove('open');
   mobileMenu.classList.remove('open');
   mobileMenuBG.classList.remove('open');
@@ -56,3 +57,7 @@ function closeMobileMenu() {
 // function heroImgCheck(scrollY) {
 //   mobileMenu.style.backgroundPosition = `center -${scrollY}px`;
 // }
+
+function mobileMenuBGAnim() {
+  const startScrollPosition = `${window.innerHeight}px`;
+}

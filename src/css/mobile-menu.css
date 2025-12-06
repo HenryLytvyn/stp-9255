@@ -11,7 +11,7 @@
   background-repeat: no-repeat; */
 
   height: 0;
-  transition: height 2s ease;
+  transition: height var(--anim-time-mobile-menu) ease;
   overflow: hidden;
 }
 
@@ -32,7 +32,7 @@
   background-repeat: no-repeat;
 
   height: 0;
-  transition: height 2s ease;
+  transition: height var(--anim-time-mobile-menu) ease;
   overflow: hidden;
 } */
 
@@ -44,28 +44,54 @@
   height: 100vh;
 }
 
-.mobile-menu__background.open {
+/* .mobile-menu__background.open {
   height: 100vh;
-}
+} */
 
 .mobile-menu .nav {
   display: block;
 }
 
-/* false background */
+/* background mobile menu */
 
-.false-bg {
+.bg-mobile-menu__overlay {
   position: absolute;
   top: 0;
-  /* left: -7px; */
+  left: 0;
   z-index: 8;
-  width: 100vw;
+  height: 100vh;
   /* height: 100%; */
-
-  height: 0;
-  transition: height 2s ease;
+  width: 100%;
   overflow: hidden;
-  /* overflow: scroll; */
+
+  transform: translateY(-100vh);
+  transition: transform var(--anim-time-mobile-menu) ease;
+
+  border: 2px solid red;
+}
+
+.bg-mobile-menu__overlay.open {
+  /* height: 100%; */
+  height: 100vh;
+  transform: translateY(0);
+}
+
+.bg-mobile-menu__overlay.close {
+  height: 100%;
+}
+
+.bg-mobile-menu {
+  position: absolute;
+  /* position: fixed; */
+  top: 0;
+  /* left: -7px; */
+  transform: translateY(100vh);
+  width: 100%;
+
+  /* height: 0; */
+  height: 100%;
+  transition: transform var(--anim-time-mobile-menu) ease;
+  /* overflow: hidden; */
 
   background: linear-gradient(
     90deg,
@@ -76,11 +102,15 @@
   );
 }
 
-.false-bg.open {
-  height: 100%;
+.bg-mobile-menu.open {
+  transform: translateY(0);
 }
 
-.false-bg__hero {
+/* .bg-mobile-menu.open {
+  height: 100%;
+} */
+
+.bg-mobile-menu__hero {
   background-image: image-set(
     url(../img/hero/hero-bg.png) 1x,
     url(../img/hero/hero-bg@2x.png) 2x
@@ -89,7 +119,7 @@
   background-repeat: no-repeat;
 }
 
-.false-bg__how-to-play {
+.bg-mobile-menu__how-to-play {
   background-image: image-set(
     url(../img/ht-play_reviews-bg-mobile.png) 1x,
     url(../img/ht-play_reviews-bg-mobile@2x.png) 2x
@@ -98,7 +128,7 @@
   background-repeat: no-repeat;
 }
 
-.false-bg__reviews {
+.bg-mobile-menu__reviews {
   margin-top: 4px;
   background-image: image-set(
     url(../img/ht-play_reviews-bg-mobile.png) 1x,
@@ -108,12 +138,12 @@
   background-repeat: no-repeat;
 }
 
-.false-bg__footer {
+.bg-mobile-menu__footer {
   background-color: #000f1a;
 }
 
 @media screen and (min-width: 1200px) {
-  .false-bg {
+  .bg-mobile-menu {
     display: none;
   }
 }
