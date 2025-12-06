@@ -67,7 +67,15 @@
   /* transform: translateY(-100vh); */
   transition: height var(--anim-time-mobile-menu) ease;
 
-  border: 2px solid red;
+  background: linear-gradient(
+    90deg,
+    #093e64 0%,
+    #043558 29.81%,
+    #043558 70.19%,
+    #003053 100%
+  );
+
+  /* border: 2px solid red; */
 }
 
 .bg-mobile-menu__overlay.open {

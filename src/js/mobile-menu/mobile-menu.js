@@ -12,14 +12,16 @@ const mobileMenuBGOverlay = document.querySelector(
 );
 const logo = document.querySelector('[data-id="header__logo"]');
 
-let scrollY;
+let scrollYOpen;
+let scrollYClose;
 // let heroImgHight;
 let isScrollLocked = false;
 let isMobileMenuOpen = false;
 
 mobileBtn.addEventListener('click', () => {
   isMobileMenuOpen = !isMobileMenuOpen;
-  // heroImgHight = 794;
+  if (isMobileMenuOpen) {
+  }
   mobileMenu.style.backgroundPosition = `center top`;
 
   navIcon.classList.toggle('open');
@@ -35,30 +37,46 @@ mobileBtn.addEventListener('click', () => {
   //   isScrollLocked = true;
   // }
 
-  scrollY = document.documentElement.scrollTop;
   if (isMobileMenuOpen) {
+    console.log('tototo');
     setAllHight();
+    scrollYOpen = document.documentElement.scrollTop;
+    mobileMenuBG.style.transition = 'transform 0s ease';
+    mobileMenuBG.style.transform = `translateY(-${scrollYOpen}px)`;
+  } else {
+    scrollYClose = document.documentElement.scrollTop;
   }
-  // heroImgCheck(Number(scrollY));
 });
 
 navLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
 logo.addEventListener('click', closeMobileMenu);
 
-function closeMobileMenu() {
-  mobileMenuBGOverlay.classList.add('close');
+function closeMobileMenu(e) {
+  // === 1. ЛОВИМ ССЫЛКУ-ЯКОРЬ ===
+  const link = e?.currentTarget;
+  const href = link?.getAttribute('href');
+  let targetY;
+
+  if (href && href.startsWith('#')) {
+    const target = document.querySelector(href);
+
+    if (target) {
+      targetY = target.getBoundingClientRect().top + window.scrollY;
+
+      console.log('Целевой scrollY:', targetY);
+    }
+  }
+
+  // === 2. ТВОЙ СУЩЕСТВУЮЩИЙ КОД ===
+  isMobileMenuOpen = false;
   navIcon.classList.remove('open');
   mobileMenu.classList.remove('open');
   mobileMenuBG.classList.remove('open');
   mobileMenuBGOverlay.classList.remove('open');
   unlockScroll();
   isScrollLocked = false;
-}
 
-// function heroImgCheck(scrollY) {
-//   mobileMenu.style.backgroundPosition = `center -${scrollY}px`;
-// }
-
-function mobileMenuBGAnim() {
-  const startScrollPosition = `${window.innerHeight}px`;
+  mobileMenuBG.style.transition =
+    'transform var(--anim-time-mobile-menu, 1s) ease';
+  mobileMenuBG.style.transform = `translateY(${targetY})`;
 }
