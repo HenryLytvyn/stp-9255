@@ -50,6 +50,7 @@ function closeMobileMenu() {
   navIcon.classList.remove('open');
   mobileMenu.classList.remove('open');
   mobileMenuBG.classList.remove('open');
+  mobileMenuBGOverlay.classList.remove('open');
   unlockScroll();
   isScrollLocked = false;
 }
