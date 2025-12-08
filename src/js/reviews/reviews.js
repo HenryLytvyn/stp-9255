@@ -72,5 +72,3 @@ function reviewsUpdate(newReview) {
 
   itemsList.insertAdjacentHTML('afterbegin', cardsMarkup([newReview]));
 }
-
-import '../api.js';
