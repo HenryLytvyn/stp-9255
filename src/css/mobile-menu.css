@@ -8,8 +8,8 @@
   height: 100vh;
 
   background-image: image-set(
-      url(../img/hero/hero-bg.png) 1x,
-      url(../img/hero/hero-bg@2x.png) 2x
+      url(../img/mobile-menu/mobile-menu-bg.webp) 1x,
+      url(../img/mobile-menu/mobile-menu-bg@2x.webp) 2x
     ),
     linear-gradient(
       90deg,
@@ -34,4 +34,10 @@
 
 .mobile-menu .nav {
   display: block;
+}
+
+@media screen and (min-width: 1200px) {
+  .mobile-menu {
+    display: none;
+  }
 }

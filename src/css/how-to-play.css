@@ -76,50 +76,50 @@
 @media screen and (max-width: 1199.98px) {
   .ht-play {
     background-image: image-set(
-      url(../img/ht-play_reviews-bg-mobile.png) 1x,
-      url(../img/ht-play_reviews-bg-mobile@2x.png) 2x
+      url(../img/ht-play_reviews-bg-mobile.webp) 1x,
+      url(../img/ht-play_reviews-bg-mobile@2x.webp) 2x
     );
   }
 
   .ht-play__icon-1::after {
     background-image: image-set(
-      url(../img/how-to-play/choose-faction-mobile.png) 1x,
-      url(../img/how-to-play/choose-faction-mobile@2x.png) 2x
+      url(../img/how-to-play/choose-faction-mobile.webp) 1x,
+      url(../img/how-to-play/choose-faction-mobile@2x.webp) 2x
     );
   }
 
   .ht-play__icon-2::after {
     background-image: image-set(
-      url(../img/how-to-play/recruit-heroes-mobile.png) 1x,
-      url(../img/how-to-play/recruit-heroes-mobile@2x.png) 2x
+      url(../img/how-to-play/recruit-heroes-mobile.webp) 1x,
+      url(../img/how-to-play/recruit-heroes-mobile@2x.webp) 2x
     );
   }
 
   .ht-play__icon-3::after {
     background-image: image-set(
-      url(../img/how-to-play/build-and-expand-mobile.png) 1x,
-      url(../img/how-to-play/build-and-expand-mobile@2x.png) 2x
+      url(../img/how-to-play/build-and-expand-mobile.webp) 1x,
+      url(../img/how-to-play/build-and-expand-mobile@2x.webp) 2x
     );
   }
 
   .ht-play__icon-4::after {
     background-image: image-set(
-      url(../img/how-to-play/conquer-territories-mobile.png) 1x,
-      url(../img/how-to-play/conquer-territories-mobile@2x.png) 2x
+      url(../img/how-to-play/conquer-territories-mobile.webp) 1x,
+      url(../img/how-to-play/conquer-territories-mobile@2x.webp) 2x
     );
   }
 
   .ht-play__icon-5::after {
     background-image: image-set(
-      url(../img/how-to-play/form-alliances-mobile.png) 1x,
-      url(../img/how-to-play/form-alliances-mobile@2x.png) 2x
+      url(../img/how-to-play/form-alliances-mobile.webp) 1x,
+      url(../img/how-to-play/form-alliances-mobile@2x.webp) 2x
     );
   }
 
   .ht-play__icon-6::after {
     background-image: image-set(
-      url(../img/how-to-play/shape-legacy-mobile.png) 1x,
-      url(../img/how-to-play/shape-legacy-mobile@2x.png) 2x
+      url(../img/how-to-play/shape-legacy-mobile.webp) 1x,
+      url(../img/how-to-play/shape-legacy-mobile@2x.webp) 2x
     );
   }
 }
@@ -127,8 +127,8 @@
 @media screen and (min-width: 1200px) {
   .ht-play {
     background-image: image-set(
-      url(../img/ht-play_reviews-bg-desktop.png) 1x,
-      url(../img/ht-play_reviews-bg-desktop@2x.png) 2x
+      url(../img/ht-play_reviews-bg-desktop.webp) 1x,
+      url(../img/ht-play_reviews-bg-desktop@2x.webp) 2x
     );
     background-size: cover;
   }
@@ -181,43 +181,43 @@
 
   .ht-play__icon-1::after {
     background-image: image-set(
-      url(../img/how-to-play/choose-faction-desktop.png) 1x,
-      url(../img/how-to-play/choose-faction-desktop@2x.png) 2x
+      url(../img/how-to-play/choose-faction-desktop.webp) 1x,
+      url(../img/how-to-play/choose-faction-desktop@2x.webp) 2x
     );
   }
 
   .ht-play__icon-2::after {
     background-image: image-set(
-      url(../img/how-to-play/recruit-heroes-desktop.png) 1x,
-      url(../img/how-to-play/recruit-heroes-desktop@2x.png) 2x
+      url(../img/how-to-play/recruit-heroes-desktop.webp) 1x,
+      url(../img/how-to-play/recruit-heroes-desktop@2x.webp) 2x
     );
   }
 
   .ht-play__icon-3::after {
     background-image: image-set(
-      url(../img/how-to-play/build-and-expand-desktop.png) 1x,
-      url(../img/how-to-play/build-and-expand-desktop@2x.png) 2x
+      url(../img/how-to-play/build-and-expand-desktop.webp) 1x,
+      url(../img/how-to-play/build-and-expand-desktop@2x.webp) 2x
     );
   }
 
   .ht-play__icon-4::after {
     background-image: image-set(
-      url(../img/how-to-play/conquer-territories-desktop.png) 1x,
-      url(../img/how-to-play/conquer-territories-desktop@2x.png) 2x
+      url(../img/how-to-play/conquer-territories-desktop.webp) 1x,
+      url(../img/how-to-play/conquer-territories-desktop@2x.webp) 2x
     );
   }
 
   .ht-play__icon-5::after {
     background-image: image-set(
-      url(../img/how-to-play/form-alliances-desktop.png) 1x,
-      url(../img/how-to-play/form-alliances-desktop@2x.png) 2x
+      url(../img/how-to-play/form-alliances-desktop.webp) 1x,
+      url(../img/how-to-play/form-alliances-desktop@2x.webp) 2x
     );
   }
 
   .ht-play__icon-6::after {
     background-image: image-set(
-      url(../img/how-to-play/shape-legacy-desktop.png) 1x,
-      url(../img/how-to-play/shape-legacy-desktop@2x.png) 2x
+      url(../img/how-to-play/shape-legacy-desktop.webp) 1x,
+      url(../img/how-to-play/shape-legacy-desktop@2x.webp) 2x
     );
   }
 }

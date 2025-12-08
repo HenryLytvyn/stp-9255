@@ -1,27 +1,27 @@
-import general_kairos_mobile from '/img/heroes/general-kairos-mobile.png';
-import general_kairos_mobile_2x from '/img/heroes/general-kairos-mobile@2x.png';
-import general_kairos_desktop from '/img/heroes/general-kairos-desktop.png';
-import general_kairos_desktop_2x from '/img/heroes/general-kairos-desktop@2x.png';
+import general_kairos_mobile from '/img/heroes/general-kairos-mobile.webp';
+import general_kairos_mobile_2x from '/img/heroes/general-kairos-mobile@2x.webp';
+import general_kairos_desktop from '/img/heroes/general-kairos-desktop.webp';
+import general_kairos_desktop_2x from '/img/heroes/general-kairos-desktop@2x.webp';
 
-import lady_an_mobile from '/img/heroes/lady-an-may-mobile.png';
-import lady_an_mobile_2x from '/img/heroes/lady-an-may-mobile@2x.png';
-import lady_an_desktop from '/img/heroes/lady-an-may-desktop.png';
-import lady_an_desktop_2x from '/img/heroes/lady-an-may-desktop@2x.png';
+import lady_an_mobile from '/img/heroes/lady-an-may-mobile.webp';
+import lady_an_mobile_2x from '/img/heroes/lady-an-may-mobile@2x.webp';
+import lady_an_desktop from '/img/heroes/lady-an-may-desktop.webp';
+import lady_an_desktop_2x from '/img/heroes/lady-an-may-desktop@2x.webp';
 
-import master_shen_mobile from '/img/heroes/master-shen-mobile.png';
-import master_shen_mobile_2x from '/img/heroes/master-shen-mobile@2x.png';
-import master_shen_desktop from '/img/heroes/master-shen-desktop.png';
-import master_shen_desktop_2x from '/img/heroes/master-shen-desktop@2x.png';
+import master_shen_mobile from '/img/heroes/master-shen-mobile.webp';
+import master_shen_mobile_2x from '/img/heroes/master-shen-mobile@2x.webp';
+import master_shen_desktop from '/img/heroes/master-shen-desktop.webp';
+import master_shen_desktop_2x from '/img/heroes/master-shen-desktop@2x.webp';
 
-import prince_riku_mobile from '/img/heroes/prince-riku-mobile.png';
-import prince_riku_mobile_2x from '/img/heroes/prince-riku-mobile@2x.png';
-import prince_riku_desktop from '/img/heroes/prince-riku-desktop.png';
-import prince_riku_desktop_2x from '/img/heroes/prince-riku-desktop@2x.png';
+import prince_riku_mobile from '/img/heroes/prince-riku-mobile.webp';
+import prince_riku_mobile_2x from '/img/heroes/prince-riku-mobile@2x.webp';
+import prince_riku_desktop from '/img/heroes/prince-riku-desktop.webp';
+import prince_riku_desktop_2x from '/img/heroes/prince-riku-desktop@2x.webp';
 
-import the_empress_mobile from '/img/heroes/the-empress-mobile.png';
-import the_empress_mobile_2x from '/img/heroes/the-empress-mobile@2x.png';
-import the_empress_desktop from '/img/heroes/the-empress-desktop.png';
-import the_empress_desktop_2x from '/img/heroes/the-empress-desktop@2x.png';
+import the_empress_mobile from '/img/heroes/the-empress-mobile.webp';
+import the_empress_mobile_2x from '/img/heroes/the-empress-mobile@2x.webp';
+import the_empress_desktop from '/img/heroes/the-empress-desktop.webp';
+import the_empress_desktop_2x from '/img/heroes/the-empress-desktop@2x.webp';
 
 const heroesCards = [
   {

@@ -1,37 +1,37 @@
-import strategic_combat_mobile from '/img/game-features/strategic-combat-mobile.png';
-import strategic_combat_mobile_2x from '/img/game-features/strategic-combat-mobile@2x.png';
-import strategic_combat_desktop from '/img/game-features/strategic-combat-desktop.png';
-import strategic_combat_desktop_2x from '/img/game-features/strategic-combat-desktop@2x.png';
+import strategic_combat_mobile from '/img/game-features/strategic-combat-mobile.webp';
+import strategic_combat_mobile_2x from '/img/game-features/strategic-combat-mobile@2x.webp';
+import strategic_combat_desktop from '/img/game-features/strategic-combat-desktop.webp';
+import strategic_combat_desktop_2x from '/img/game-features/strategic-combat-desktop@2x.webp';
 
-import campaign_map_mobile from '/img/game-features/campaign-map-mobile.png';
-import campaign_map_mobile_2x from '/img/game-features/campaign-map-mobile@2x.png';
-import campaign_map_desktop from '/img/game-features/campaign-map-desktop.png';
-import campaign_map_desktop_2x from '/img/game-features/campaign-map-desktop@2x.png';
+import campaign_map_mobile from '/img/game-features/campaign-map-mobile.webp';
+import campaign_map_mobile_2x from '/img/game-features/campaign-map-mobile@2x.webp';
+import campaign_map_desktop from '/img/game-features/campaign-map-desktop.webp';
+import campaign_map_desktop_2x from '/img/game-features/campaign-map-desktop@2x.webp';
 
-import hero_system_mobile from '/img/game-features/hero-system-mobile.png';
-import hero_system_mobile_2x from '/img/game-features/hero-system-mobile@2x.png';
-import hero_system_desktop from '/img/game-features/hero-system-desktop.png';
-import hero_system_desktop_2x from '/img/game-features/hero-system-desktop@2x.png';
+import hero_system_mobile from '/img/game-features/hero-system-mobile.webp';
+import hero_system_mobile_2x from '/img/game-features/hero-system-mobile@2x.webp';
+import hero_system_desktop from '/img/game-features/hero-system-desktop.webp';
+import hero_system_desktop_2x from '/img/game-features/hero-system-desktop@2x.webp';
 
-import interactive_storytelling_mobile from '/img/game-features/interactive-storytelling-mobile.png';
-import interactive_storytelling_mobile_2x from '/img/game-features/interactive-storytelling-mobile@2x.png';
-import interactive_storytelling_desktop from '/img/game-features/interactive-storytelling-desktop.png';
-import interactive_storytelling_desktop_2x from '/img/game-features/interactive-storytelling-desktop@2x.png';
+import interactive_storytelling_mobile from '/img/game-features/interactive-storytelling-mobile.webp';
+import interactive_storytelling_mobile_2x from '/img/game-features/interactive-storytelling-mobile@2x.webp';
+import interactive_storytelling_desktop from '/img/game-features/interactive-storytelling-desktop.webp';
+import interactive_storytelling_desktop_2x from '/img/game-features/interactive-storytelling-desktop@2x.webp';
 
-import dynasty_management_mobile from '/img/game-features/dynasty-management-mobile.png';
-import dynasty_management_mobile_2x from '/img/game-features/dynasty-management-mobile@2x.png';
-import dynasty_management_desktop from '/img/game-features/dynasty-management-desktop.png';
-import dynasty_management_desktop_2x from '/img/game-features/dynasty-management-desktop@2x.png';
+import dynasty_management_mobile from '/img/game-features/dynasty-management-mobile.webp';
+import dynasty_management_mobile_2x from '/img/game-features/dynasty-management-mobile@2x.webp';
+import dynasty_management_desktop from '/img/game-features/dynasty-management-desktop.webp';
+import dynasty_management_desktop_2x from '/img/game-features/dynasty-management-desktop@2x.webp';
 
-import stunning_visuals_mobile from '/img/game-features/stunning-visuals-mobile.png';
-import stunning_visuals_mobile_2x from '/img/game-features/stunning-visuals-mobile@2x.png';
-import stunning_visuals_desktop from '/img/game-features/stunning-visuals-desktop.png';
-import stunning_visuals_desktop_2x from '/img/game-features/stunning-visuals-desktop@2x.png';
+import stunning_visuals_mobile from '/img/game-features/stunning-visuals-mobile.webp';
+import stunning_visuals_mobile_2x from '/img/game-features/stunning-visuals-mobile@2x.webp';
+import stunning_visuals_desktop from '/img/game-features/stunning-visuals-desktop.webp';
+import stunning_visuals_desktop_2x from '/img/game-features/stunning-visuals-desktop@2x.webp';
 
-import pvp_and_pve_mobile from '/img/game-features/pvp-and-pve-mobile.png';
-import pvp_and_pve_mobile_2x from '/img/game-features/pvp-and-pve-mobile@2x.png';
-import pvp_and_pve_desktop from '/img/game-features/pvp-and-pve-desktop.png';
-import pvp_and_pve_desktop_2x from '/img/game-features/pvp-and-pve-desktop@2x.png';
+import pvp_and_pve_mobile from '/img/game-features/pvp-and-pve-mobile.webp';
+import pvp_and_pve_mobile_2x from '/img/game-features/pvp-and-pve-mobile@2x.webp';
+import pvp_and_pve_desktop from '/img/game-features/pvp-and-pve-desktop.webp';
+import pvp_and_pve_desktop_2x from '/img/game-features/pvp-and-pve-desktop@2x.webp';
 
 const cards = [
   {
