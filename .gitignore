@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 
 drafts
+src/js/api.js
